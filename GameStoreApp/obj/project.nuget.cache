@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "146Jtf6v+e4iVGU1vzjv/0IwpHmzCHV9/FWT+2fB/qDzi0zlrBa1/9heMpmDgN3L8n4o1Lw6zvT4878CSudyNQ==",
+  "dgSpecHash": "2qKQM/8wui6WajDyFhkZe71Sk0o16FdiDpOH/keTc+30ZVxoWNb1QiCuSlRMaw7s4Wo1APdU2ljP379bGxCd5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jaime David Terrero\\source\\repos\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj",
+  "projectFilePath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.17\\microsoft.aspnetcore.mvc.razor.extensions.5.0.17.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.17\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.17.nupkg.sha512",
