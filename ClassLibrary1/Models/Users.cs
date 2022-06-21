@@ -16,5 +16,6 @@ namespace Database.Models
         public int PhoneNumber { get; set; }
         public string Direction { get; set; }
         public DateTime DateofBirth { get; set; }
+        public ICollection<Products> Products { get; set; }
     }
 }

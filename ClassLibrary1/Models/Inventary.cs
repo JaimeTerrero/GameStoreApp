@@ -11,6 +11,7 @@ namespace Database.Models
         public int Id { get; set; }
         public string ProvidersName { get; set; }
         public int Quantity { get; set; }
+        public ICollection<Products> Products { get; set; }
 
     }
 }
