@@ -12,5 +12,7 @@ namespace Database.Models
         public string ProductName { get; set; }
         public int Quantity { get; set; }
         public double Total { get; set; }
+
+        public ICollection<Products> Products { get; set; }
     }
 }

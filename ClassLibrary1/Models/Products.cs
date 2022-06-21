@@ -14,5 +14,14 @@ namespace Database.Models
         public string ImageUrl { get; set; }
         public double Price { get; set; }
         public string Category { get; set; }
+
+        public int SalesId { get; set; }
+        public Sales Sales { get; set; }
+        public int InventaryId { get; set; }
+        public Inventary Inventary { get; set; }
+        public int UsersId { get; set; }
+        public Users Users { get; set; }
+        
+
     }
 }
