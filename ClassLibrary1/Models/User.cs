@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Database.Models
 {
-    public class Users
+    public class User
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -16,5 +16,9 @@ namespace Database.Models
         public int PhoneNumber { get; set; }
         public string Direction { get; set; }
         public DateTime DateofBirth { get; set; }
+<<<<<<< Updated upstream:ClassLibrary1/Models/Users.cs
+=======
+        public ICollection<Product> Products { get; set; }
+>>>>>>> Stashed changes:ClassLibrary1/Models/User.cs
     }
 }
