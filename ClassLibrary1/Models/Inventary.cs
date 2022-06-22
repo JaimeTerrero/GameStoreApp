@@ -12,7 +12,11 @@ namespace Database.Models
         public string ProvidersName { get; set; }
         public int Quantity { get; set; }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+        public ICollection<Product> Products { get; set; }
+>>>>>>> Stashed changes
 =======
         public ICollection<Product> Products { get; set; }
 >>>>>>> Stashed changes

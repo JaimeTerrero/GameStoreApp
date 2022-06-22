@@ -1,10 +1,18 @@
 {
   "version": 2,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "dgSpecHash": "gYf0DRlvxx36rWlDT7HyIC7yZ+LbKW6CJnEWxeX0krlqIWfC9YQwGSq7Yk0s2LcXNBpVpKq+zr54cvkkDEatSw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj",
   "expectedPackageFiles": [
+=======
+  "dgSpecHash": "xWj5O8aMeURjHk8ImX61YHs86fu/jK06uNSUYa1vYqTh+D21YZzTePHYJGAjwrdylH6jBuO7faqazr+1qyM/7w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+>>>>>>> Stashed changes
 =======
   "dgSpecHash": "xWj5O8aMeURjHk8ImX61YHs86fu/jK06uNSUYa1vYqTh+D21YZzTePHYJGAjwrdylH6jBuO7faqazr+1qyM/7w==",
   "success": true,
@@ -20,6 +28,7 @@
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\microsoft.codeanalysis.csharp\\3.8.0\\microsoft.codeanalysis.csharp.3.8.0.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\microsoft.codeanalysis.razor\\5.0.17\\microsoft.codeanalysis.razor.5.0.17.nupkg.sha512",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\microsoft.extensions.dependencymodel\\5.0.0\\microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
@@ -29,6 +38,8 @@
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
 =======
+=======
+>>>>>>> Stashed changes
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
@@ -129,6 +140,9 @@
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ],
   "logs": []

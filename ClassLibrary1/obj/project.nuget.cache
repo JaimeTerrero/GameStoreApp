@@ -1,6 +1,7 @@
 {
   "version": 2,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "dgSpecHash": "ri0BZ5JtpFiAH75nv9ylaDeFie2lMmo6ha4jATJ0D2erZw+Je/OojAHZtGGCy6q4qWCxQCSTYRn3bBkLZHFuzA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj",
@@ -9,6 +10,11 @@
   "dgSpecHash": "m97QYWMvP2KkpXycyBBV2Fu1jw2u3Uy6QBN6LuLCuQWGtMNhClXqNyWihklFHIJaqvi6qL+y32YeEJ75Lu7Vzw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj",
+=======
+  "dgSpecHash": "m97QYWMvP2KkpXycyBBV2Fu1jw2u3Uy6QBN6LuLCuQWGtMNhClXqNyWihklFHIJaqvi6qL+y32YeEJ75Lu7Vzw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -108,6 +114,9 @@
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   "logs": []
 }

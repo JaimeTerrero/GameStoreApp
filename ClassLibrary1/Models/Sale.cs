@@ -16,6 +16,9 @@ namespace Database.Models
 =======
 
         public ICollection<Product> Products { get; set; }
+<<<<<<< Updated upstream:ClassLibrary1/Models/Sale.cs
 >>>>>>> Stashed changes:ClassLibrary1/Models/Sale.cs
+=======
+>>>>>>> Stashed changes:ClassLibrary1/Models/Sales.cs
     }
 }

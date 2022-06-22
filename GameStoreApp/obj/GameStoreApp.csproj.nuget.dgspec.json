@@ -5,6 +5,7 @@
   },
   "projects": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -17,11 +18,19 @@
     "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
+=======
+    "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+>>>>>>> Stashed changes
         "projectUniqueName": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj",
         "projectName": "Database",
         "projectPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj",
         "packagesPath": "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\obj\\",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [

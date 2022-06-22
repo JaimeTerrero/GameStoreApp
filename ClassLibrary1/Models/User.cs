@@ -16,9 +16,13 @@ namespace Database.Models
         public int PhoneNumber { get; set; }
         public string Direction { get; set; }
         public DateTime DateofBirth { get; set; }
+<<<<<<< Updated upstream:ClassLibrary1/Models/User.cs
 <<<<<<< Updated upstream:ClassLibrary1/Models/Users.cs
 =======
         public ICollection<Product> Products { get; set; }
 >>>>>>> Stashed changes:ClassLibrary1/Models/User.cs
+=======
+        public ICollection<Product> Products { get; set; }
+>>>>>>> Stashed changes:ClassLibrary1/Models/Users.cs
     }
 }

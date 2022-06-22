@@ -24,6 +24,9 @@ namespace Database.Models
         public Inventary Inventary { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
+<<<<<<< Updated upstream:ClassLibrary1/Models/Product.cs
 >>>>>>> Stashed changes:ClassLibrary1/Models/Product.cs
+=======
+>>>>>>> Stashed changes:ClassLibrary1/Models/Products.cs
     }
 }
