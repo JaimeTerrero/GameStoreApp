@@ -1,0 +1,12 @@
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\Database.deps.json
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\Database.dll
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\Database.pdb
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.csproj.AssemblyReference.cache
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.AssemblyInfoInputs.cache
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.AssemblyInfo.cs
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.csproj.CoreCompileInputs.cache
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.dll
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\refint\Database.dll
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.pdb
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\ref\Database.dll

@@ -8,19 +8,24 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jimke\\.nuget\\packages\\": {}
+    "C:\\Users\\Shiirou\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jimke\\Documents\\GameStoreApp\\ClassLibrary1\\Database.csproj",
+      "projectUniqueName": "C:\\Users\\Shiirou\\source\\repos\\JaimeTerrero\\GameStoreApp\\ClassLibrary1\\Database.csproj",
       "projectName": "Database",
-      "projectPath": "C:\\Users\\jimke\\Documents\\GameStoreApp\\ClassLibrary1\\Database.csproj",
-      "packagesPath": "C:\\Users\\jimke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jimke\\Documents\\GameStoreApp\\ClassLibrary1\\obj\\",
+      "projectPath": "C:\\Users\\Shiirou\\source\\repos\\JaimeTerrero\\GameStoreApp\\ClassLibrary1\\Database.csproj",
+      "packagesPath": "C:\\Users\\Shiirou\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Shiirou\\source\\repos\\JaimeTerrero\\GameStoreApp\\ClassLibrary1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\jimke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Shiirou\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

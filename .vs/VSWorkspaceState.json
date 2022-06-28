@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GameStoreApp",
-    "\\GameStoreApp\\Controllers",
-    "\\GameStoreApp\\Views",
-    "\\GameStoreApp\\Views\\Shared"
+    "\\ClassLibrary1",
+    "\\ClassLibrary1\\Models"
   ],
+  "SelectedNode": "\\ClassLibrary1\\Models\\Products.cs",
   "PreviewInSolutionExplorer": false
 }
