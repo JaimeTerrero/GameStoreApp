@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Database.Models
 {
-    public class Sales
+    public class Category
     {
         public int Id { get; set; }
-        public string ProductName { get; set; }
-        public int Quantity { get; set; }
-        public double Total { get; set; }
+        public string Name { get; set; }
+
 
         public ICollection<Product> Products { get; set; }
     }
