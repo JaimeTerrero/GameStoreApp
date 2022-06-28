@@ -1,4 +1,6 @@
-﻿using GameStoreApp.Models;
+﻿using Application.Services;
+using Database;
+using GameStoreApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,27 +13,16 @@ namespace GameStoreApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        //hola
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ProductService _productService;
+
+        public HomeController(ApplicationContext dbContext)
         {
-            _logger = logger;
+            _productService = new(dbContext);
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(await _productService.GetAllViewModel());
         }
     }
 }
