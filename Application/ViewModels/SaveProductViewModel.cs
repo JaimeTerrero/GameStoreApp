@@ -25,5 +25,7 @@ namespace Application.ViewModels
 
         [Required(ErrorMessage = "Debe colocar la categoría del producto")]
         public int CategoryId { get; set; }
+
+        public List<CategoryViewModel> Categories { get; set; }
     }
 }
