@@ -10,16 +10,18 @@ namespace GameStoreApp.Controllers
     public class ProductController : Controller
     {
         private readonly ProductService _productService;
+        private readonly CategoryService _categoryService;//
         public ProductController(ApplicationContext dbContext)
         {
             _productService = new(dbContext);
+            _categoryService = new(dbContext);//
         }
         public async Task<IActionResult> Index()
         {
             return View(await _productService.GetAllViewModel());
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             /*
               -Se le pasa en el return la vista de SaveProduct debido a que tiene un nombre diferente
@@ -29,7 +31,10 @@ namespace GameStoreApp.Controllers
 
               -Se coloca como modelo la clase SaveProductViewModel porque eso es lo 
               que está esperando la vista de lo contrario dara error.*/
-            return View("SaveProduct", new SaveProductViewModel());
+
+            SaveProductViewModel vm = new(); //
+            vm.Categories = await _categoryService.GetAllViewModel();//
+            return View("SaveProduct", vm);//
         }
 
         [HttpPost]
@@ -37,6 +42,7 @@ namespace GameStoreApp.Controllers
         {
             if (!ModelState.IsValid)
             {
+                vm.Categories = await _categoryService.GetAllViewModel();//
                 return View("SaveProduct", vm);
             }
             await _productService.Add(vm);
@@ -53,7 +59,10 @@ namespace GameStoreApp.Controllers
 
              -Se le pasa el Id para que busque el determinado producto en la base de datos y nos lo enseñe
              */
-            return View("SaveProduct", await _productService.GetByIdViewModel(id));
+
+            SaveProductViewModel vm = await _productService.GetByIdViewModel(id); //
+            vm.Categories = await _categoryService.GetAllViewModel();//
+            return View("SaveProduct", vm);
         }
 
         [HttpPost]
@@ -61,6 +70,7 @@ namespace GameStoreApp.Controllers
         {
             if (!ModelState.IsValid)
             {
+                vm.Categories = await _categoryService.GetAllViewModel();//
                 return View("SaveProduct", vm);
             }
 

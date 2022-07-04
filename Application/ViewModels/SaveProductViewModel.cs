@@ -23,7 +23,7 @@ namespace Application.ViewModels
         [Required(ErrorMessage = "Debe colocar la Url de la imagen")]
         public string ImageUrl { get; set; }
 
-        [Required(ErrorMessage = "Debe colocar la categoría del producto")]
+        [Range(1, int.MaxValue, ErrorMessage = "Debe colocar la categoría del producto")]
         public int CategoryId { get; set; }
 
         public List<CategoryViewModel> Categories { get; set; }
