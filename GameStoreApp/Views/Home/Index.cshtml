@@ -23,7 +23,10 @@
                             <div class="mb-2">
                                 <small class="fw-bold fs-6">RD$@item.Price</small>
                             </div>
-                            <a asp-controller="Product" asp-action="ShowProduct" asp-route-id="@item.Id" class="btn btn-primary">Ver Producto</a>
+                            <div class="d-flex gap-4">
+                                <a asp-controller="Product" asp-action="ShowProduct" asp-route-id="@item.Id" class="btn btn-primary">Ver Producto</a>
+                                <a asp-controller="#" asp-action="#" asp-route-id="@item.Id" class="btn btn-success">Agregar al Carrito</a>
+                            </div>
                         </div>
                     </div>
                 </div>

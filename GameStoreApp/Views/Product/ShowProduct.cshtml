@@ -9,7 +9,30 @@
             <div class="bg-primary p-3 rounded-3">
                 <h2 class="text-center text-white">Detalles de @Model.Name</h2>
             </div>
-            <img class="img-fluid" src="@Model.ImageUrl" alt="imagen producto" />
+            <div class="mt-4 mb-3">
+                <img class="img-fluid" src="@Model.ImageUrl" alt="imagen producto" />
+            </div>
+            <div class="mb-1">
+                <p class="fw-bold">Precio: <span class="fw-normal">RD$@Model.Price</span></p>
+            </div>
+            <div>
+                <p class="fw-bold">Descripción: <span class="fw-normal">@Model.Description</span></p>
+            </div>
+            <div class="mb-2">
+                <p class="fw-bold">Cantidad:</p>
+                <select class="form-select">
+                    <option value="">Seleccione una opción</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="d-flex gap-2">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Volver atrás</a>
+                <a asp-controller="#" asp-action="#" class="btn btn-success">Agregar al Carrito</a>
+            </div>
         </div>
     </div>
 </div>
