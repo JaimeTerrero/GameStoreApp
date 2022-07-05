@@ -793,3 +793,4 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\Delete.cshtml.g.cs
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\SaveCategory.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\ShowProduct.cshtml.g.cs

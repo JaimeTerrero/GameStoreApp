@@ -20,9 +20,10 @@
                         <div class="card-body">
                             <h4>@item.Name</h4>
                             <p class="card-text">@item.Description</p>
-                            <div>
+                            <div class="mb-2">
                                 <small class="fw-bold fs-6">RD$@item.Price</small>
                             </div>
+                            <a asp-controller="Product" asp-action="ShowProduct" asp-route-id="@item.Id" class="btn btn-primary">Ver Producto</a>
                         </div>
                     </div>
                 </div>
