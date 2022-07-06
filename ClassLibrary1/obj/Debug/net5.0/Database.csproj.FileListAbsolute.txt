@@ -25,3 +25,6 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\ClassLibrar
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.pdb
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.genruntimeconfig.cache
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\ref\Database.dll
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\Database.runtimeconfig.json
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\Database.runtimeconfig.dev.json
+C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.genruntimeconfig.cache
