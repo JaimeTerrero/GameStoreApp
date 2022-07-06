@@ -38,29 +38,33 @@ namespace Application.Services
 
         public async Task Delete(int id)
         {
-            var product = await _categoryRepository.GetByIdAsync(id);
-            await _categoryRepository.DeleteAsync(product);
+            var category = await _categoryRepository.GetByIdAsync(id);
+            await _categoryRepository.DeleteAsync(category);
         }
 
         public async Task<SaveCategoryViewModel> GetByIdViewModel(int id)
         {
-            var product = await _categoryRepository.GetByIdAsync(id);
+            var category = await _categoryRepository.GetByIdAsync(id);
 
             SaveCategoryViewModel vm = new();
-            vm.Id = product.Id;
-            vm.Name = product.Name;
+            vm.Id = category.Id;
+            vm.Name = category.Name;
 
             return vm;
         }
 
+
+        // Método para saber cuantos productos hay por categoría 
         public async Task<List<CategoryViewModel>> GetAllViewModel()
         {
-            var productList = await _categoryRepository.GetAllAsync();
+            var categoryList = await _categoryRepository.GetAllAsync(new List<string> { "Products"}); 
+            //lo que le pasamos entre llaves es el Navigation Property
 
-            return productList.Select(product => new CategoryViewModel
+            return categoryList.Select(category => new CategoryViewModel
             {
-                Id = product.Id,
-                Name = product.Name,
+                Id = category.Id,
+                Name = category.Name,
+                ProductQuantity = category.Products.Count()
             }).ToList();
         }
     }

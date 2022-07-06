@@ -29,6 +29,7 @@
                                     <a asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">Editar</a>
                                     <a asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Borrar</a>
                                 </div>
+                                <small class="fw-bold fs-6">La cantidad de productos: @item.ProductQuantity</small>
                             </div>
                         </div>
                     </div>

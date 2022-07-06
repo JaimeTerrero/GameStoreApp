@@ -36,9 +36,21 @@ namespace Application.Repository
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<Category>> GetAllAsync()
+        //public async Task<List<Category>> GetAllAsync()
+        //{
+        //    return await _dbContext.Set<Category>().ToListAsync();
+        //}
+
+        public async Task<List<Category>> GetAllAsync(List<string> properties)
         {
-            return await _dbContext.Set<Category>().ToListAsync();
+            var query = _dbContext.Set<Category>().AsQueryable();
+
+            foreach(string property in properties)
+            {
+                query = query.Include(property);
+            }
+
+            return await query.ToListAsync();
         }
 
         public async Task<Category> GetByIdAsync(int id)
