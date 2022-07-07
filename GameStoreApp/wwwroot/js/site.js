@@ -45,5 +45,5 @@ function Spinner() {
 
     setTimeout(() => {
         result.remove();
-    }, 3000);
+    }, 750);
 }

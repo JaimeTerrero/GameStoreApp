@@ -93,17 +93,17 @@ body {
     top: 0;
 }
 
-.sk-circle .sk-child:before {
-    content: '';
-    display: block;
-    margin: 0 auto;
-    width: 15%;
-    height: 15%;
-    background-color: #333;
-    border-radius: 100%;
-    -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
-    animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
-}
+    .sk-circle .sk-child:before {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 15%;
+        height: 15%;
+        background-color: #1AA7EC;
+        border-radius: 100%;
+        -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+        animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+    }
 
 .sk-circle .sk-circle2 {
     -webkit-transform: rotate(30deg);
