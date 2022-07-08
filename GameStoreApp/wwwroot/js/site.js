@@ -1,5 +1,5 @@
 ﻿/*const form = document.querySelector("#form");*/
-const algo = document.querySelector("#algo").value;
+const algo = document.querySelector("#algo");
 const result = document.querySelector("#result");
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,26 +11,24 @@ function showAlgo(e) {
 
     const cantidad = document.querySelector("#cantidad").value;
 
-    Spinner();
-
     if (cantidad === "0") {
-        swal("Error", "Debes de seleccionar una cantidad antes de agregar al carrito", "error");
+        swal("Error!", "Debe de seleccionar una categoría antes de agregar al carrito", "error");
 
         return;
     }
 
-    
-    swal("Bien hecho!", "klk", "success");
-   
+    algo.textContent = "Agregado!";
+    swal("Bien hecho!", "El producto fue agregado al carrito", "success");
 
+    setTimeout(() => {
+        window.location.reload();
+    }, 3000);
 }
-
 
 function Spinner() {
     const divSpinner = document.createElement('div');
     divSpinner.classList.add('sk-circle');
     divSpinner.innerHTML = `
-
       <div class="sk-circle1 sk-child"></div>
       <div class="sk-circle2 sk-child"></div>
       <div class="sk-circle3 sk-child"></div>
