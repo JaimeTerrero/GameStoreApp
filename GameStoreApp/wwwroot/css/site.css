@@ -249,3 +249,8 @@ body {
         transform: scale(1);
     }
 }
+
+.pruba{
+    font-weight: 700;
+    color: aquamarine;
+}
