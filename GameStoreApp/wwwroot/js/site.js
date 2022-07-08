@@ -1,5 +1,5 @@
 ﻿/*const form = document.querySelector("#form");*/
-const algo = document.querySelector("#algo");
+const algo = document.querySelector("#algo").value;
 const result = document.querySelector("#result");
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,8 +19,12 @@ function showAlgo(e) {
         return;
     }
 
-    swal("Bien hecho!", "Producto añadido al carrito", "success");
+    
+    swal("Bien hecho!", "klk", "success");
+   
+
 }
+
 
 function Spinner() {
     const divSpinner = document.createElement('div');
