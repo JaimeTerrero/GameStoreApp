@@ -46,16 +46,16 @@ namespace Application.Repository
             return await _dbContext.Set<Product>().FindAsync(id);
         }
 
-        //public virtual async Task<List<Product>> GetAllWithIncludeAsync(List<string> properties)
-        //{
-        //    var query = _dbContext.Set<Product>().AsQueryable();
+        public virtual async Task<List<Product>> GetAllWithIncludeAsync(List<string> properties)
+        {
+            var query = _dbContext.Set<Product>().AsQueryable();
 
-        //    foreach(string property in properties)
-        //    {
-        //        query = query.Include(property);
-        //    }
+            foreach (string property in properties)
+            {
+                query = query.Include(property);
+            }
 
-        //    return await query.ToListAsync();
-        //}
+            return await query.ToListAsync();
+        }
     }
 }

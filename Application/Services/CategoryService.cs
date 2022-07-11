@@ -13,10 +13,12 @@ namespace Application.Services
     public class CategoryService
     {
         private readonly CategoryRepository _categoryRepository;
+        private readonly ProductRepository _productRepository;
 
         public CategoryService(ApplicationContext dbContext)
         {
             _categoryRepository = new(dbContext);
+            _productRepository = new(dbContext);
         }
 
         public async Task Add(SaveCategoryViewModel vm)
@@ -67,5 +69,7 @@ namespace Application.Services
                 ProductQuantity = category.Products.Count()
             }).ToList();
         }
+
+        
     }
 }
