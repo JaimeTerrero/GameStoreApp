@@ -3,6 +3,7 @@ using Application.ViewModels;
 using Database;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Application.Helpers;
 
 namespace GameStoreApp.Controllers
 {
@@ -32,6 +33,7 @@ namespace GameStoreApp.Controllers
 
             if(userVm != null)
             {
+                HttpContext.Session.Set<UserViewModel>("user", userVm);
                 return RedirectToRoute(new { controller = "Home", action = "Index" });
             }
             else
