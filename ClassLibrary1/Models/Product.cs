@@ -15,8 +15,15 @@ namespace Database.Models
         public double Price { get; set; }
 
 
-        public int CategoryId { get; set; }
-        public Category Category { get; set; }
         
+        public int CategoryId { get; set; } //Foreign Key
+        // Navigation Properties
+        public Category Category { get; set; }
+
+
+        
+        public int UserId { get; set; } //Foreign Key
+        // Navigation Properties
+        public User User { get; set; } // Un producto pertenece a un Usuario
     }
 }
