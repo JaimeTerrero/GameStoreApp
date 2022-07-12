@@ -44,6 +44,26 @@ namespace Application.Services
             await _userRepository.UpdateAsync(user);
         }
 
+        public async Task<UserViewModel> Login(LoginViewModel loginVm)
+        {
+            User user = await _userRepository.LoginAsync(loginVm);
+
+            if(user == null)
+            {
+                return null;
+            }
+
+            UserViewModel userVm = new();
+            userVm.Id = user.Id;
+            userVm.Name = user.Name;
+            userVm.Email = user.Email;
+            userVm.Phone = user.Phone;
+            userVm.Username = user.Username;
+            userVm.Password = user.Password;
+
+            return userVm;
+        }
+
         public async Task Delete(int id)
         {
             var user = await _userRepository.GetByIdAsync(id);

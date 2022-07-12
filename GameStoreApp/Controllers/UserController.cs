@@ -21,14 +21,26 @@ namespace GameStoreApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(LoginViewModel loginVm)
+        public async Task<IActionResult> Index(LoginViewModel loginVm)
         {
             if (!ModelState.IsValid)
             {
                 return View(loginVm);
             }
 
-            return View();
+            UserViewModel userVm = await _userService.Login(loginVm);
+
+            if(userVm != null)
+            {
+                return RedirectToRoute(new { controller = "Home", action = "Index" });
+            }
+            else
+            {
+                /*Este error se mostrará en la vista de Index en la parte de @Html.ValidationSummary */
+                ModelState.AddModelError("userValidation", "Datos de acceso incorrectos");
+            }
+
+            return View(loginVm);
         }
 
         public IActionResult Register()

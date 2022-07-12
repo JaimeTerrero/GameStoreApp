@@ -1,4 +1,6 @@
-﻿using Database;
+﻿using Application.Helpers;
+using Application.ViewModels;
+using Database;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -20,6 +22,7 @@ namespace Application.Repository
 
         public async Task AddAsync(User user)
         {
+            user.Password = PasswordEncryption.ComputeSha256Hash(user.Password);
             await _dbContext.Users.AddAsync(user);
             await _dbContext.SaveChangesAsync();
         }
@@ -56,6 +59,14 @@ namespace Application.Repository
             }
 
             return await query.ToListAsync();
+        }
+
+        public async Task<User> LoginAsync(LoginViewModel loginVm)
+        {
+            string passwordEncrypt = PasswordEncryption.ComputeSha256Hash(loginVm.Password);
+            User user = await _dbContext.Set<User>()
+                .FirstOrDefaultAsync(user => user.Username == loginVm.Username && user.Password == passwordEncrypt);
+            return user;
         }
     }
 }
