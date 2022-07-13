@@ -1,6 +1,8 @@
 ﻿using Application.Services;
 using Application.ViewModels;
 using Database;
+using GameStoreApp.Middlewares;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -11,13 +13,21 @@ namespace GameStoreApp.Controllers
     {
         private readonly ProductService _productService;
         private readonly CategoryService _categoryService;
-        public ProductController(ApplicationContext dbContext)
+        private readonly ValidateUserSession _validateUserSession;
+
+
+        public ProductController(ApplicationContext dbContext, ValidateUserSession validateUserSession, IHttpContextAccessor httpContextAccessor)
         {
-            _productService = new(dbContext);
-            _categoryService = new(dbContext);
+            _productService = new(dbContext, httpContextAccessor);
+            _categoryService = new(dbContext, httpContextAccessor);
+            _validateUserSession = validateUserSession;
         }
         public async Task<IActionResult> Index()
         {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
             return View(await _productService.GetAllViewModel());
         }
 
@@ -32,6 +42,11 @@ namespace GameStoreApp.Controllers
               -Se coloca como modelo la clase SaveProductViewModel porque eso es lo 
               que está esperando la vista de lo contrario dara error.*/
 
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
             SaveProductViewModel vm = new(); 
             vm.Categories = await _categoryService.GetAllViewModel();
             return View("SaveProduct", vm);
@@ -40,6 +55,11 @@ namespace GameStoreApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SaveProductViewModel vm)
         {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
             if (!ModelState.IsValid)
             {
                 vm.Categories = await _categoryService.GetAllViewModel();
@@ -60,6 +80,11 @@ namespace GameStoreApp.Controllers
              -Se le pasa el Id para que busque el determinado producto en la base de datos y nos lo enseñe
              */
 
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
             SaveProductViewModel vm = await _productService.GetByIdViewModel(id); 
             vm.Categories = await _categoryService.GetAllViewModel();
             return View("SaveProduct", vm);
@@ -68,6 +93,11 @@ namespace GameStoreApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(SaveProductViewModel vm)
         {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
             if (!ModelState.IsValid)
             {
                 vm.Categories = await _categoryService.GetAllViewModel();
@@ -82,6 +112,11 @@ namespace GameStoreApp.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
             /*Aquí no tuvimos que retornar el nombre de la vista porque el
              nombre del método es el mismo que el de la vista*/
             return View(await _productService.GetByIdViewModel(id));
@@ -90,12 +125,22 @@ namespace GameStoreApp.Controllers
         [HttpPost]
         public async Task<IActionResult> DeletePost(int id)
         {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
             await _productService.Delete(id);
             return RedirectToRoute(new { controller = "Product", action = "Index" });
         }
 
         public async Task<IActionResult> ShowProduct(int id)
         {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
             SaveProductViewModel vm = await _productService.GetByIdViewModel(id);
             return View("ShowProduct", vm);
         }

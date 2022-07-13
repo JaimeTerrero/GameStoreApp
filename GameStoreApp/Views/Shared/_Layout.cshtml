@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@using Application.Helpers;
+@using Application.ViewModels;
+@inject IHttpContextAccessor httpContext;
+@{
+    UserViewModel user = httpContext.HttpContext.Session.Get<UserViewModel>("user");
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -12,22 +19,31 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand text-white fw-bold" asp-area="" asp-controller="Home" asp-action="Index">GameStoreApp</a>
+                <a class="navbar-brand text-white fw-bold" asp-area="" asp-controller="@(user != null ? "Home" : "User")" asp-action="Index">GameStoreApp</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="Register">Registrate!</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" asp-controller="Product" asp-action="Index">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fw-bold" asp-controller="Category" asp-action="Index">Categorías</a>
-                        </li>
+                        @if(user != null) //Si es un usuario logueado mostrará estás opciones, de lo contrario no lo hara.
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold" asp-controller="Product" asp-action="Index">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold" asp-controller="Category" asp-action="Index">Categorías</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item"> @*De no estar logueado solo mostraá la opción de Registrarse*@
+                                <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="Register">Registrate!</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

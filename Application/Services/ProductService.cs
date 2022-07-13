@@ -2,21 +2,31 @@
 using Application.ViewModels;
 using Database;
 using Database.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Application.Helpers;
 
 namespace Application.Services
 {
     public class ProductService
     {
         private readonly ProductRepository _productRepository;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly UserViewModel userViewModel;
 
-        public ProductService(ApplicationContext dbContext)
+        public ProductService(ApplicationContext dbContext, IHttpContextAccessor httpContextAccessor)
         {
             _productRepository = new(dbContext);
+            _httpContextAccessor = httpContextAccessor;
+            userViewModel = _httpContextAccessor.HttpContext.Session.Get<UserViewModel>("user"); /* userViewModel 
+                                                                                                  sirve para
+                                                                                                  guardar el usuario
+                                                                                                  que está guardado en
+                                                                                                  en la sección. */
         }
 
         public async Task Add(SaveProductViewModel vm)
@@ -27,6 +37,7 @@ namespace Application.Services
             product.ImageUrl = vm.ImageUrl;
             product.Description = vm.Description;
             product.CategoryId = vm.CategoryId;
+            product.UserId = userViewModel.Id;
 
             await _productRepository.AddAsync(product);
         }
@@ -69,7 +80,7 @@ namespace Application.Services
         {
             var productList = await _productRepository.GetAllAsync();
 
-            return productList.Select(product => new ProductViewModel
+            var productAlgo = productList.Select(product => new ProductViewModel
             {
                 Name = product.Name,
                 Description = product.Description,
@@ -77,6 +88,8 @@ namespace Application.Services
                 Price = product.Price,
                 ImageUrl = product.ImageUrl
             }).ToList();
+
+            return productAlgo;
         }
 
         public async Task<List<ProductViewModel>> GetAllViewModelWithFilters(FilterProductViewModel filters)

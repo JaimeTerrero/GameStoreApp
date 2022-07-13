@@ -2,11 +2,13 @@
 using Application.ViewModels;
 using Database;
 using Database.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Application.Helpers;
 
 namespace Application.Services
 {
@@ -14,11 +16,15 @@ namespace Application.Services
     {
         private readonly CategoryRepository _categoryRepository;
         private readonly ProductRepository _productRepository;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly UserViewModel userViewModel;
 
-        public CategoryService(ApplicationContext dbContext)
+        public CategoryService(ApplicationContext dbContext, IHttpContextAccessor httpContextAccessor)
         {
             _categoryRepository = new(dbContext);
             _productRepository = new(dbContext);
+            _httpContextAccessor = httpContextAccessor;
+            userViewModel = _httpContextAccessor.HttpContext.Session.Get<UserViewModel>("user");
         }
 
         public async Task Add(SaveCategoryViewModel vm)
