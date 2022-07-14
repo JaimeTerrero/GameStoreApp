@@ -16,6 +16,10 @@ namespace GameStoreApp.Controllers
 {
     public class HomeController : Controller
     {
+
+
+
+        // sensacion del blok
         private readonly ProductService _productService;
         private readonly CategoryService _categoryService;
         private readonly ValidateUserSession _validateUserSession;
