@@ -880,3 +880,6 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.csproj.CopyComplete
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.genruntimeconfig.cache
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\ref\GameStoreApp.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\MailKit.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\BouncyCastle.Crypto.dll

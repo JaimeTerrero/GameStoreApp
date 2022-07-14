@@ -1,4 +1,5 @@
-﻿using Application.Repository;
+﻿using Application.Dtos.Email;
+using Application.Repository;
 using Application.ViewModels;
 using Database;
 using Database.Models;
@@ -13,10 +14,12 @@ namespace Application.Services
     public class UserService
     {
         private readonly UserRepository _userRepository;
+        private readonly IEmailService _emailService;
 
-        public UserService(ApplicationContext dbContext)
+        public UserService(ApplicationContext dbContext, IEmailService emailService)
         {
             _userRepository = new(dbContext);
+            _emailService = emailService;
         }
 
         public async Task<SaveUserViewModel> Add(SaveUserViewModel vm)
@@ -37,6 +40,13 @@ namespace Application.Services
             userVm.Phone = user.Phone;
             userVm.Username = user.Username;
             userVm.Password = user.Password;
+
+            await _emailService.SendAsync(new EmailRequest
+            {
+                To = user.Email,
+                Subject = "Bienvenido a nuestra tienda GameStoreApp",
+                Body = $"<h1>Sea bienvenido a GameStoreApp</h1> <p>Your username is {user.Username}</p>"
+            });
 
             return userVm;
         }

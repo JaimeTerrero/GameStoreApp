@@ -14,9 +14,9 @@ namespace GameStoreApp.Controllers
         private readonly UserService _userService;
         private readonly ValidateUserSession _validateUserSession;
 
-        public UserController(ApplicationContext dbContext, ValidateUserSession validateUserSession)
+        public UserController(ApplicationContext dbContext, ValidateUserSession validateUserSession, IEmailService emailService)
         {
-            _userService = new(dbContext);
+            _userService = new(dbContext,emailService);
             _validateUserSession = validateUserSession;
         }
         public IActionResult Index()

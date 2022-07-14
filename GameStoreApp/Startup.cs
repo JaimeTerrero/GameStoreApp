@@ -1,3 +1,6 @@
+using Application.Services;
+using Application.Servicess;
+using Application.Settings;
 using Database;
 using GameStoreApp.Middlewares;
 using Microsoft.AspNetCore.Builder;
@@ -34,6 +37,9 @@ namespace GameStoreApp
             services.AddControllersWithViews();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<ValidateUserSession, ValidateUserSession>();
+
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+            services.AddTransient<IEmailService, EmailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
