@@ -18,10 +18,11 @@ namespace Application.Repository
             _dbContext = dbContext;
         }
 
-        public async Task AddAsync(Category category)
+        public async Task<Category> AddAsync(Category category)
         {
             await _dbContext.Categories.AddAsync(category);
             await _dbContext.SaveChangesAsync();
+            return category;
         }
 
         public async Task UpdateAsync(Category category)

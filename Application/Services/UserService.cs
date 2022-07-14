@@ -19,7 +19,7 @@ namespace Application.Services
             _userRepository = new(dbContext);
         }
 
-        public async Task Add(SaveUserViewModel vm)
+        public async Task<SaveUserViewModel> Add(SaveUserViewModel vm)
         {
             User user = new();
             user.Name = vm.Name;
@@ -28,7 +28,17 @@ namespace Application.Services
             user.Username = vm.Username;
             user.Password = vm.Password;
 
-            await _userRepository.AddAsync(user);
+            user = await _userRepository.AddAsync(user);
+
+            SaveUserViewModel userVm = new();
+            userVm.Id = user.Id;
+            userVm.Name = user.Name;
+            userVm.Email = user.Email;
+            userVm.Phone = user.Phone;
+            userVm.Username = user.Username;
+            userVm.Password = user.Password;
+
+            return userVm;
         }
 
         public async Task Update(SaveUserViewModel vm)

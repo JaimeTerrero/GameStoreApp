@@ -29,7 +29,7 @@ namespace Application.Services
                                                                                                   en la sección. */
         }
 
-        public async Task Add(SaveProductViewModel vm)
+        public async Task<SaveProductViewModel> Add(SaveProductViewModel vm)
         {
             Product product = new();
             product.Name = vm.Name;
@@ -39,12 +39,22 @@ namespace Application.Services
             product.CategoryId = vm.CategoryId;
             product.UserId = userViewModel.Id;
 
-            await _productRepository.AddAsync(product);
+            product = await _productRepository.AddAsync(product);
+
+            SaveProductViewModel productVm = new();
+            productVm.Id = product.Id;
+            productVm.Name = product.Name;
+            productVm.Price = product.Price;
+            productVm.ImageUrl = product.ImageUrl;
+            productVm.Description = product.Description;
+            productVm.CategoryId = product.CategoryId;
+
+            return productVm;
         }
 
         public async Task Update(SaveProductViewModel vm)
         {
-            Product product = new();
+            Product product = await _productRepository.GetByIdAsync(vm.Id);
             product.Id = vm.Id;
             product.Name = vm.Name;
             product.Price = vm.Price;

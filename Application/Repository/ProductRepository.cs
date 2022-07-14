@@ -18,10 +18,11 @@ namespace Application.Repository
             _dbContext = dbContext;
         }
 
-        public async Task AddAsync(Product product)
+        public async Task<Product> AddAsync(Product product)
         {
             await _dbContext.Products.AddAsync(product);
             await _dbContext.SaveChangesAsync();
+            return product;
         }
 
         public async Task UpdateAsync(Product product)

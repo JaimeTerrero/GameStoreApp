@@ -27,17 +27,23 @@ namespace Application.Services
             userViewModel = _httpContextAccessor.HttpContext.Session.Get<UserViewModel>("user");
         }
 
-        public async Task Add(SaveCategoryViewModel vm)
+        public async Task<SaveCategoryViewModel> Add(SaveCategoryViewModel vm)
         {
             Category category = new();
             category.Name = vm.Name;
 
-            await _categoryRepository.AddAsync(category);
+            category = await _categoryRepository.AddAsync(category);
+
+            SaveCategoryViewModel categoryVm = new();
+            categoryVm.Id = category.Id;
+            categoryVm.Name = category.Name;
+
+            return categoryVm;
         }
 
         public async Task Update(SaveCategoryViewModel vm)
         {
-            Category category = new();
+            Category category = await _categoryRepository.GetByIdAsync(vm.Id);
             category.Id = vm.Id;
             category.Name = vm.Name;
 

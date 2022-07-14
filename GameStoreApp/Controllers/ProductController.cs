@@ -4,6 +4,8 @@ using Database;
 using GameStoreApp.Middlewares;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace GameStoreApp.Controllers
@@ -65,7 +67,12 @@ namespace GameStoreApp.Controllers
                 vm.Categories = await _categoryService.GetAllViewModel();
                 return View("SaveProduct", vm);
             }
-            await _productService.Add(vm);
+            SaveProductViewModel productVm = await _productService.Add(vm);
+            if(productVm != null && productVm.Id != 0)
+            {
+                productVm.ImageUrl = UploadFile(vm.File, productVm.Id);
+                await _productService.Update(productVm);
+            }
             return RedirectToRoute(new { controller = "Product", action = "Index" });
         }
 
@@ -104,8 +111,10 @@ namespace GameStoreApp.Controllers
                 return View("SaveProduct", vm);
             }
 
-            /*Aquí se hace lo mismo que en el Create, lo único que se le cambio fue el método que proviene
-             del servicio*/
+            SaveProductViewModel productVm = await _productService.GetByIdViewModel(vm.Id);
+            vm.ImageUrl = UploadFile(vm.File, productVm.Id,true,productVm.ImageUrl);
+
+            
             await _productService.Update(vm);
             return RedirectToRoute(new { controller = "Product", action = "Index" });
         }
@@ -131,6 +140,39 @@ namespace GameStoreApp.Controllers
             }
 
             await _productService.Delete(id);
+
+
+
+            // get directory path
+            string basePath = $"/Images/Products/{id}";
+            string path = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot{basePath}");
+
+
+            /*
+             En esta parte lo que hacemos basicamente es borrar todo, desde directorios
+             hasta folders.
+
+            Primero se borran los archivos.
+            Segundo se borran los folder.
+            Tercero se borran los directorios.
+             */
+            if (Directory.Exists(path))
+            {
+                DirectoryInfo directoryInfo = new DirectoryInfo(path);
+
+                foreach(FileInfo file in directoryInfo.GetFiles())
+                {
+                    file.Delete();
+                }
+
+                foreach (DirectoryInfo folder in directoryInfo.GetDirectories())
+                {
+                    folder.Delete(true);
+                }
+
+                Directory.Delete(path);
+            }
+
             return RedirectToRoute(new { controller = "Product", action = "Index" });
         }
 
@@ -143,6 +185,62 @@ namespace GameStoreApp.Controllers
 
             SaveProductViewModel vm = await _productService.GetByIdViewModel(id);
             return View("ShowProduct", vm);
+        }
+
+        private string UploadFile(IFormFile file, int id, bool isEditMode = false, string imageUrl = "")
+        {
+            /*Decimos que si estamos editando y por alguna razón no se pone
+             un archivo, el programa devolverá el mismo archivo que se encontraba
+            anteriormente. */
+            if(isEditMode && file == null)
+            {
+                return imageUrl;
+            }
+
+            // get directory path
+            string basePath = $"/Images/Products/{id}";
+            string path = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot{basePath}");
+
+            // create a folder if not exist
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            //El Guid nos sirve para generar un Id único a cada imagen
+            // get file path
+            Guid guid = Guid.NewGuid();
+
+            FileInfo fileInfo = new(file.FileName);
+            string fileName = guid + fileInfo.Extension;
+
+            string filenameWithPath = Path.Combine(path, fileName);
+
+            // pa subirlo
+            using(var stream = new FileStream(filenameWithPath, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+
+
+            // En esta parte borramos la imagen vieja, para así no llenar las carpetas
+            if (isEditMode)
+            {
+                // El split es para divirlo por slashs (/)
+                string[] oldImagePart = imageUrl.Split('/');
+                string oldImageName = oldImagePart[^1]; //^1 significa la última posición
+                string completeImageOldPath = Path.Combine(path, oldImageName);
+
+                //se coloca el nombre completo del paquete porque ya tenemos una definición de File
+                //y para evitar de que traiga ese método
+                //de HTTPContext ya que poseen el mismo nombre, y no es ese que se necesita
+                if (System.IO.File.Exists(completeImageOldPath))
+                {
+                    System.IO.File.Delete(completeImageOldPath);
+                }
+            }
+
+            return $"{basePath}/{fileName}";
         }
     }
 }

@@ -20,11 +20,12 @@ namespace Application.Repository
             _dbContext = dbContext;
         }
 
-        public async Task AddAsync(User user)
+        public async Task<User> AddAsync(User user)
         {
             user.Password = PasswordEncryption.ComputeSha256Hash(user.Password);
             await _dbContext.Users.AddAsync(user);
             await _dbContext.SaveChangesAsync();
+            return user;
         }
 
         public async Task UpdateAsync(User user)
