@@ -16,6 +16,10 @@ namespace Application.ViewModels
         public string Name { get; set; }
 
 
+        [Required(ErrorMessage = "Debe colocar un apellido")]
+        [DataType(DataType.Text)]
+        public string LastName { get; set; }
+
 
         [Required(ErrorMessage = "Debe colocar un correo")]
         [DataType(DataType.Text)]

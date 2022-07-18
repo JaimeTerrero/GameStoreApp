@@ -90,5 +90,12 @@ namespace GameStoreApp.Controllers
             HttpContext.Session.Remove("user");
             return RedirectToRoute(new { controller = "User", action = "Index" });
         }
+
+        public async Task<IActionResult> SeeAllUsers()
+        {
+            return View(await _userService.GetAllViewModel());
+        }
+
+        
     }
 }

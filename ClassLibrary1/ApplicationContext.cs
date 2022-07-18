@@ -67,6 +67,7 @@ namespace Database
             modelBuilder.Entity<User>().Property(user => user.Username).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<User>().Property(user => user.Password).IsRequired();
             modelBuilder.Entity<User>().Property(user => user.Name).IsRequired().HasMaxLength(150);
+            modelBuilder.Entity<User>().Property(user => user.LastName).IsRequired().HasMaxLength(250);
             modelBuilder.Entity<User>().Property(user => user.Email).IsRequired();
             modelBuilder.Entity<User>().Property(user => user.Phone).IsRequired();
 
