@@ -2,14 +2,18 @@
 
 @{
     ViewData["title"] = "Users Info";
+    int index = 1;
 }
 
 <table class="table">
+
     <thead>
         <tr>
+            <th scope="row">#</th>
             <th scope="row">Usuario</th>
             <th scope="row">Nombre</th>
             <th scope="row">Apellido</th>
+            <th scope="row">Teléfono</th>
             <th scope="row">Correo</th>
         </tr>
     </thead>
@@ -17,13 +21,16 @@
         @foreach (Application.ViewModels.UserViewModel item in Model)
         {
             <tr>
+                <td scope="row">@index</td>
                 <td scope="row">@item.Username</td>
                 <td scope="row">@item.Name</td>
                 <td scope="row">@item.LastName</td>
+                <td scope="row">@item.Phone</td>
                 <td scope="row">@item.Email</td>
-                <td scope="row"><a href="#" class="btn btn-danger">Eliminar</a></td>
-                <td scope="row"><a href="#" class="btn btn-primary">Editar</a></td>
+                <td scope="row"><a asp-controller="User" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a></td>
+                <td scope="row"><a asp-controller="User" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a></td>
             </tr>
+            index++;
         }
     </tbody>
 </table>

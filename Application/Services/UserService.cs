@@ -47,7 +47,7 @@ namespace Application.Services
             {
                 To = user.Email,
                 Subject = "Bienvenido a nuestra tienda GameStoreApp",
-                Body = $"<h1>Sea bienvenido a GameStoreApp</h1> <p>Your username is {user.Username}</p>"
+                Body = $"<h1>Sea bienvenido a GameStoreApp</h1> <p>Su usuario es {user.Username}</p>"
             });
 
             return userVm;
