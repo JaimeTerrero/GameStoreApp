@@ -21,14 +21,14 @@
         @foreach (Application.ViewModels.UserViewModel item in Model)
         {
             <tr>
-                <td scope="row">@index</td>
+                <th scope="row">@index</th>
                 <td scope="row">@item.Username</td>
                 <td scope="row">@item.Name</td>
                 <td scope="row">@item.LastName</td>
                 <td scope="row">@item.Phone</td>
                 <td scope="row">@item.Email</td>
-                <td scope="row"><a asp-controller="User" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a></td>
                 <td scope="row"><a asp-controller="User" asp-action="EditUserInfo" asp-route-id="@item.Id" class="btn btn-primary">Editar</a></td>
+                <td scope="row"><a asp-controller="User" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a></td>
             </tr>
             index++;
         }
