@@ -12,7 +12,7 @@ function showAlgo(e) {
     const cantidad = document.querySelector("#cantidad").value;
 
     if (cantidad === "0") {
-        swal("Error!", "Debe de seleccionar una categoría antes de agregar al carrito", "error");
+        swal("Error!", "Debe de seleccionar una cantidad antes de agregar al carrito", "error");
 
         return;
     }
