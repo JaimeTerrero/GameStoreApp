@@ -28,18 +28,25 @@
                     <ul class="navbar-nav flex-grow-1">
                         @if(user != null) //Si es un usuario logueado mostrará estás opciones, de lo contrario no lo hara.
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" asp-controller="Product" asp-action="Index">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" asp-controller="Category" asp-action="Index">Categorías</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="SeeAllUsers">Usuarios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión</a>
-                            </li>
+                            if(user.Id == 6){
+                                <li class="nav-item">
+                                    <a class="nav-link text-white fw-bold" asp-controller="Product" asp-action="Index">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white fw-bold" asp-controller="Category" asp-action="Index">Categorías</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="SeeAllUsers">Usuarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión</a>
+                                </li>
+                            }else{
+                                <li class="nav-item">
+                                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión</a>
+                                </li>
+                            }
+                            
                         }
                         else
                         {
