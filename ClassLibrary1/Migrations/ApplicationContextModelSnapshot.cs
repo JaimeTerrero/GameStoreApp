@@ -35,6 +35,24 @@ namespace Database.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Database.Models.Inventary", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Inventary");
+                });
+
             modelBuilder.Entity("Database.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -51,6 +69,9 @@ namespace Database.Migrations
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("InvetaryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -64,6 +85,8 @@ namespace Database.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("InvetaryId");
 
                     b.HasIndex("UserId");
 
@@ -109,11 +132,32 @@ namespace Database.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("InventaryUser", b =>
+                {
+                    b.Property<int>("InventaryId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsersId")
+                        .HasColumnType("int");
+
+                    b.HasKey("InventaryId", "UsersId");
+
+                    b.HasIndex("UsersId");
+
+                    b.ToTable("InventaryUser");
+                });
+
             modelBuilder.Entity("Database.Models.Product", b =>
                 {
                     b.HasOne("Database.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Database.Models.Inventary", "Inventary")
+                        .WithMany("Products")
+                        .HasForeignKey("InvetaryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -125,10 +169,32 @@ namespace Database.Migrations
 
                     b.Navigation("Category");
 
+                    b.Navigation("Inventary");
+
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("InventaryUser", b =>
+                {
+                    b.HasOne("Database.Models.Inventary", null)
+                        .WithMany()
+                        .HasForeignKey("InventaryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Database.Models.User", null)
+                        .WithMany()
+                        .HasForeignKey("UsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Database.Models.Category", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("Database.Models.Inventary", b =>
                 {
                     b.Navigation("Products");
                 });

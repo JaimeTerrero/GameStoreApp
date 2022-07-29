@@ -891,3 +891,4 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.pdb
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.genruntimeconfig.cache
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\ref\GameStoreApp.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\ProductDetails.cshtml.g.cs

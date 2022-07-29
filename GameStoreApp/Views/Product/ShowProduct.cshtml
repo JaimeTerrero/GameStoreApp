@@ -9,7 +9,7 @@
                 <img class="animate__animated animate__fadeInLeft" src="@Model.ImageUrl" alt="imagen producto" width="550" height="450"/>
             </div>
         </div>
-        <form id="form">
+        <form id="form" method="post" asp-controller="Product" asp-action="ShowProductPost">
             <div class="p-2 mt-4 col-7">
                 <div class="bg-primary p-3 rounded-3">
                     <h2 class="text-center text-white">Detalles de @Model.Name</h2>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="d-flex gap-2 mt-3">
                     <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Volver atrás</a>
-                    <a asp-controller="#" asp-action="#" class="btn btn-success" id="algo">Agregar al Carrito</a>
+                    <a asp-controller="Product" asp-action="ProductDetails" asp-route-id="@Model.Id" class="btn btn-success" id="algo">Agregar al Carrito</a>
                     @*<input type="submit" class="btn btn-success" value="Agregar Carrito" />*@
                 </div>
 

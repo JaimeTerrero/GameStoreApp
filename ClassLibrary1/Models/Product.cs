@@ -25,5 +25,6 @@ namespace Database.Models
         public int UserId { get; set; } //Foreign Key
         // Navigation Properties
         public User User { get; set; } // Un producto pertenece a un Usuario
+
     }
 }
