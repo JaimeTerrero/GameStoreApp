@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Application.Helpers;
 using GameStoreApp.Middlewares;
 using System.Linq;
+using Database.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace GameStoreApp.Controllers
 {
@@ -14,13 +16,13 @@ namespace GameStoreApp.Controllers
     {
         private readonly UserService _userService;
         private readonly ValidateUserSession _validateUserSession;
-
-        private readonly ApplicationContext _User;
+        private readonly ApplicationContext _dbContext;
 
         public UserController(ApplicationContext dbContext, ValidateUserSession validateUserSession, IEmailService emailService)
         {
             _userService = new(dbContext,emailService);
             _validateUserSession = validateUserSession;
+            _dbContext = dbContext;
         }
         public IActionResult Index()
         {
@@ -74,7 +76,7 @@ namespace GameStoreApp.Controllers
         public JsonResult ValidateUserName(string userdata)
         {
             System.Threading.Thread.Sleep(200);
-            var SeachData = _User.Users.Where(x => x.Username == userdata).SingleOrDefault();
+            var SeachData = _dbContext.Users.Where(x => x.Username == userdata).SingleOrDefault();
             if (SeachData != null)
             {
                 return Json(1);
