@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Application.Helpers;
 using GameStoreApp.Middlewares;
+using System.Linq;
 
 namespace GameStoreApp.Controllers
 {
@@ -13,6 +14,8 @@ namespace GameStoreApp.Controllers
     {
         private readonly UserService _userService;
         private readonly ValidateUserSession _validateUserSession;
+
+        private readonly ApplicationContext _User;
 
         public UserController(ApplicationContext dbContext, ValidateUserSession validateUserSession, IEmailService emailService)
         {
@@ -68,6 +71,20 @@ namespace GameStoreApp.Controllers
             return View(new SaveUserViewModel());
         }
 
+        public JsonResult ValidateUserName(string userdata)
+        {
+            System.Threading.Thread.Sleep(200);
+            var SeachData = _User.Users.Where(x => x.Username == userdata).SingleOrDefault();
+            if (SeachData != null)
+            {
+                return Json(1);
+            }
+            else
+            {
+                return Json(0);
+            }
+        }
+
         [HttpPost]
         public async Task<IActionResult> Register(SaveUserViewModel userVm)
         {
@@ -96,8 +113,6 @@ namespace GameStoreApp.Controllers
             return View(await _userService.GetAllViewModel());
         }
 
-<<<<<<< HEAD
-=======
         public async Task<IActionResult> EditUserInfo(int id)
         {
             SaveUserViewModel vm = await _userService.GetByIdViewModel(id);
@@ -112,7 +127,6 @@ namespace GameStoreApp.Controllers
             return RedirectToRoute(new { controller = "User", action = "SeeAllUsers" });
         }
 
->>>>>>> d8a581970dbaaeaddd29ac97d3a89ef39f63258e
         public async Task<IActionResult> Delete(int id)
         {
             return View(await _userService.GetByIdViewModel(id));

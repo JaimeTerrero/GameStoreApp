@@ -28,3 +28,17 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\ClassLibrar
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.pdb
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.genruntimeconfig.cache
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\ref\Database.dll
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\Database.deps.json
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\Database.runtimeconfig.json
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\Database.runtimeconfig.dev.json
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\Database.dll
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\ref\Database.dll
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\bin\Debug\net5.0\Database.pdb
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.AssemblyInfoInputs.cache
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.AssemblyInfo.cs
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.csproj.CoreCompileInputs.cache
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.dll
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\ref\Database.dll
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.pdb
+C:\Users\jimke\Documents\GameStoreApp\ClassLibrary1\obj\Debug\net5.0\Database.genruntimeconfig.cache
