@@ -176,6 +176,7 @@ namespace GameStoreApp.Controllers
             return RedirectToRoute(new { controller = "Product", action = "Index" });
         }
 
+        
         public async Task<IActionResult> ShowProduct(int id)
         {
             if (!_validateUserSession.HasUser())
@@ -187,6 +188,30 @@ namespace GameStoreApp.Controllers
             return View("ShowProduct", vm);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> ShowProductPost(int id)
+        {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
+            SaveProductViewModel vm = new();
+
+            return View("ShowProduct", await _productService.Add(vm));
+        }
+
+        public async Task<IActionResult> ProductDetails(int id)
+        {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+             
+            return View("ProductDetails", await _productService.GetAllViewModel());
+        }
+
+        #region private methods
         private string UploadFile(IFormFile file, int id, bool isEditMode = false, string imageUrl = "")
         {
             /*Decimos que si estamos editando y por alguna razón no se pone
@@ -242,5 +267,6 @@ namespace GameStoreApp.Controllers
 
             return $"{basePath}/{fileName}";
         }
+        #endregion
     }
 }

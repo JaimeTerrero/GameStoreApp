@@ -96,6 +96,23 @@ namespace GameStoreApp.Controllers
             return View(await _userService.GetAllViewModel());
         }
 
+<<<<<<< HEAD
+=======
+        public async Task<IActionResult> EditUserInfo(int id)
+        {
+            SaveUserViewModel vm = await _userService.GetByIdViewModel(id);
+            return View("EditUserInfo", vm);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditUserInfo(SaveUserViewModel vm)
+        {
+            await _userService.Update(vm);
+
+            return RedirectToRoute(new { controller = "User", action = "SeeAllUsers" });
+        }
+
+>>>>>>> d8a581970dbaaeaddd29ac97d3a89ef39f63258e
         public async Task<IActionResult> Delete(int id)
         {
             return View(await _userService.GetByIdViewModel(id));

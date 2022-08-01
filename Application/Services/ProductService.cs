@@ -123,5 +123,22 @@ namespace Application.Services
 
             return listViewModels;
         }
+
+        public async Task<List<ProductViewModel>> GetAllProducts()
+        {
+            var productList = await _productRepository.GetAllAsync();
+
+            var productAlgo = productList.Select(product => new ProductViewModel
+            {
+                Name = product.Name,
+                Description = product.Description,
+                Id = product.Id,
+                Price = product.Price,
+                ImageUrl = product.ImageUrl
+            }).ToList();
+
+            return productAlgo;
+        }
+
     }
 }

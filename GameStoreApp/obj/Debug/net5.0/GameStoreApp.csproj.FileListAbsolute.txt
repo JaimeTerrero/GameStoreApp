@@ -438,40 +438,6 @@ C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\GameStoreApp\obj\Debug\n
 C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\SaveProduct.cshtml.g.cs
 C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\ShowProduct.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.csproj.AssemblyReference.cache
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.AssemblyInfoInputs.cache
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.AssemblyInfo.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.csproj.CoreCompileInputs.cache
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorAssemblyInfo.cache
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorAssemblyInfo.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\scopedcss\bundle\GameStoreApp.styles.css
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\staticwebassets\GameStoreApp.StaticWebAssets.Manifest.cache
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.TagHelpers.input.cache
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.TagHelpers.output.cache
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorCoreGenerate.cache
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\Delete.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\SaveCategory.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Delete.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\SaveProduct.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\ShowProduct.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Register.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorTargetAssemblyInfo.cache
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorTargetAssemblyInfo.cs
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\refint\GameStoreApp.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.pdb
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\appsettings.json
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\GameStoreApp.exe
@@ -496,8 +462,6 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cors.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -560,8 +524,6 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.CSharp.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.CommandLine.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
@@ -571,7 +533,6 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.Xml.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -582,8 +543,6 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Http.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -595,10 +554,7 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.EventSource.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.TraceSource.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.ObjectPool.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.Primitives.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Extensions.WebEncoders.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.JSInterop.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.Net.Http.Headers.dll
@@ -697,7 +653,6 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\System.Resources.Reader.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\System.Resources.ResourceManager.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\System.Resources.Writer.dll
-C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\System.Runtime.CompilerServices.VisualC.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\System.Runtime.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\System.Runtime.Extensions.dll
@@ -764,6 +719,11 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\GameStoreApp.Views.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\GameStoreApp.Views.pdb
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\MailKit.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -777,10 +737,19 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.Identity.Client.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
@@ -795,7 +764,9 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\MimeKit.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\BouncyCastle.Crypto.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\System.Composition.AttributedModel.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\System.Composition.Convention.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\System.Composition.Hosting.dll
@@ -805,6 +776,7 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -874,12 +846,52 @@ C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreAp
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Application.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Database.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Identity.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Application.pdb
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Database.pdb
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\Identity.pdb
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.csproj.AssemblyReference.cache
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.AssemblyInfoInputs.cache
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.AssemblyInfo.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.csproj.CoreCompileInputs.cache
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorAssemblyInfo.cache
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorAssemblyInfo.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\scopedcss\bundle\GameStoreApp.styles.css
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\staticwebassets\GameStoreApp.StaticWebAssets.Manifest.cache
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.TagHelpers.input.cache
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.TagHelpers.output.cache
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorCoreGenerate.cache
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\Delete.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\SaveCategory.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Delete.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\SaveProduct.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\ShowProduct.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Delete.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\EditUserInfo.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Register.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\SeeAllUsers.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorTargetAssemblyInfo.cache
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorTargetAssemblyInfo.cs
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.Views.pdb
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.csproj.CopyComplete
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\refint\GameStoreApp.dll
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.pdb
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.genruntimeconfig.cache
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\ref\GameStoreApp.dll
+<<<<<<< HEAD
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\MailKit.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\MimeKit.dll
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\BouncyCastle.Crypto.dll
@@ -891,3 +903,6 @@ C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\GameStoreApp\obj\Debug\n
 C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
 C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Register.cshtml.g.cs
 C:\Users\Shiirou\source\repos\JaimeTerrero\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\SeeAllUsers.cshtml.g.cs
+=======
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\ProductDetails.cshtml.g.cs
+>>>>>>> d8a581970dbaaeaddd29ac97d3a89ef39f63258e

@@ -30,6 +30,7 @@ namespace Application.Repository
 
         public async Task UpdateAsync(User user)
         {
+            user.Password = PasswordEncryption.ComputeSha256Hash(user.Password);
             _dbContext.Entry(user).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
         }

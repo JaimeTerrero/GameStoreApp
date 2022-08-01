@@ -9,8 +9,7 @@ namespace Database.Models
     public class Inventary
     {
         public int Id { get; set; }
-        public string ProvidersName { get; set; }
+        public int UserId { get; set; }
         public int Quantity { get; set; }
-        public ICollection<Product> Products { get; set; }
     }
 }
