@@ -1,0 +1,29 @@
+﻿@model List<Application.ViewModels.UserViewModel>
+
+@{
+    ViewData["title"] = "Users Info";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="row">Usuario</th>
+            <th scope="row">Nombre</th>
+            <th scope="row">Apellido</th>
+            <th scope="row">Correo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Application.ViewModels.UserViewModel item in Model)
+        {
+            <tr>
+                <td scope="row">@item.Username</td>
+                <td scope="row">@item.Name</td>
+                <td scope="row">@item.LastName</td>
+                <td scope="row">@item.Email</td>
+                <td scope="row"><a href="#" class="btn btn-danger">Eliminar</a></td>
+                <td scope="row"><a href="#" class="btn btn-primary">Editar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

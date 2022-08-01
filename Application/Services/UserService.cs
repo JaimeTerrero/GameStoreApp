@@ -26,6 +26,7 @@ namespace Application.Services
         {
             User user = new();
             user.Name = vm.Name;
+            user.LastName = vm.LastName;
             user.Email = vm.Email;
             user.Phone = vm.Phone;
             user.Username = vm.Username;
@@ -36,6 +37,7 @@ namespace Application.Services
             SaveUserViewModel userVm = new();
             userVm.Id = user.Id;
             userVm.Name = user.Name;
+            userVm.LastName = user.LastName;
             userVm.Email = user.Email;
             userVm.Phone = user.Phone;
             userVm.Username = user.Username;
@@ -56,6 +58,7 @@ namespace Application.Services
             User user = new();
             user.Id = vm.Id;
             user.Name = vm.Name;
+            user.LastName = vm.LastName;
             user.Email = vm.Email;
             user.Phone = vm.Phone;
             user.Username = vm.Username;
@@ -76,6 +79,7 @@ namespace Application.Services
             UserViewModel userVm = new();
             userVm.Id = user.Id;
             userVm.Name = user.Name;
+            userVm.LastName = user.LastName;
             userVm.Email = user.Email;
             userVm.Phone = user.Phone;
             userVm.Username = user.Username;
@@ -97,6 +101,7 @@ namespace Application.Services
             SaveUserViewModel vm = new();
             vm.Id = user.Id;
             vm.Name = user.Name;
+            vm.LastName = user.LastName;
             vm.Email = user.Email;
             vm.Phone = user.Phone;
             vm.Username = user.Username;
@@ -112,6 +117,7 @@ namespace Application.Services
             return userList.Select(user => new UserViewModel
             {
                 Name = user.Name,
+                LastName = user.LastName,
                 Email = user.Email,
                 Id = user.Id,
                 Phone = user.Phone,

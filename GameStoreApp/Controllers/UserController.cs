@@ -90,5 +90,23 @@ namespace GameStoreApp.Controllers
             HttpContext.Session.Remove("user");
             return RedirectToRoute(new { controller = "User", action = "Index" });
         }
+
+        public async Task<IActionResult> SeeAllUsers()
+        {
+            return View(await _userService.GetAllViewModel());
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            return View(await _userService.GetByIdViewModel(id));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeletePost(int id)
+        {
+            await _userService.Delete(id);
+
+            return RedirectToRoute(new { controller = "User", action = "SeeAllUsers" });
+        }
     }
 }
