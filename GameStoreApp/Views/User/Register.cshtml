@@ -73,11 +73,12 @@
 </div>
 <script>
     function UserCheck() {
-        $("#Status").html("Checking....")
+        $("#Status").html("Checking....");
         $.post("@Url.Action("ValidateUserName","User")",
             {
                 userdata: $("#Username").val()
             },
+
             function (data) {
                 if (data == 0) {
                     $("#Status").html('<font color="Green">Availeble !. you can take it.</font>');
@@ -88,6 +89,6 @@
                     $("#Username").css("border-color", "Red");
                 }
 
-            })
+            });
     }
 </script>
