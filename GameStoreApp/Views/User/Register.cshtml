@@ -109,11 +109,17 @@
                     $("#Email").css("border-color", "Green");
                     $("#Register").prop("disabled", false);
                 }
+                else if (data == 2) {
+                    $("#Show").html('<font color="Red">Correo inválido</font>');
+                    $("#Email").css("border-color", "Red");
+                    $("#Register").prop("disabled", true);
+                }
                 else {
                     $("#Show").html('<font color="Red">El correo ya está registrado. Intente con otro</font>');
                     $("Email").css("border-color", "Red");
                     $("#Register").prop("disabled", true);
                 }
+
             });
     }
 
@@ -138,4 +144,25 @@
             });
 
     }
+
+    //function EmailValidationCheck(){
+    //    $("#Show").html("Verificando...");
+    //    $.post("@Url./*Action("IsEmailValid","User")*/", {
+    //        email: $("Email").val()
+    //    },
+        
+    //    function(data){
+    //        if (data == 0) {
+    //            $("#Show").html('<font color="Green">Correo válido</font>');
+    //            $("#Email").css("border-color", "Green");
+    //            $("#Register").prop("disabled", true);
+    //        }
+    //        else {
+    //            $("#Check").html('<font color="Red">Correo inválido</font>');
+    //            $("#Email").css("border-color", "Red");
+    //            $("#Register").prop("disabled", true);
+    //        }
+    //    }
+    //    )
+    //}
 </script>

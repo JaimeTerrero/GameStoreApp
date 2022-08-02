@@ -95,6 +95,8 @@ namespace GameStoreApp.Controllers
             if(SearchData != null)
             {
                 return Json(1);
+            }else if(!EmailValidationProccess(emailData)){
+                return Json(2);
             }
             else
             {
@@ -114,19 +116,6 @@ namespace GameStoreApp.Controllers
             {
                 return Json(0);
             }
-        }
-        
-        public JsonResult IsEmailValid(string email)
-        {
-            if (EmailValidationProccess(email))
-            {
-                return Json(1);
-            }
-            else
-            {
-                return Json(0);
-            }
-
         }
 
         public static bool EmailValidationProccess(string email)
