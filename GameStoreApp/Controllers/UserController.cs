@@ -8,6 +8,7 @@ using GameStoreApp.Middlewares;
 using System.Linq;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace GameStoreApp.Controllers
 {
@@ -113,6 +114,26 @@ namespace GameStoreApp.Controllers
             {
                 return Json(0);
             }
+        }
+        
+        public JsonResult IsEmailValid(string email)
+        {
+            if (EmailValidationProccess(email))
+            {
+                return Json(1);
+            }
+            else
+            {
+                return Json(0);
+            }
+
+        }
+
+        public static bool EmailValidationProccess(string email)
+        {
+            Regex emailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
+
+            return emailRegex.IsMatch(email);
         }
 
         [HttpPost]
