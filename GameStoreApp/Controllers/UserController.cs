@@ -73,11 +73,39 @@ namespace GameStoreApp.Controllers
             return View(new SaveUserViewModel());
         }
 
-        public JsonResult ValidateUserName(string userdata)
+        public JsonResult ValidateUserName(string userData)
         {
             System.Threading.Thread.Sleep(200);
-            var SeachData = _dbContext.Users.Where(x => x.Username == userdata).SingleOrDefault();
+            var SeachData = _dbContext.Users.Where(x => x.Username == userData).FirstOrDefault();
             if (SeachData != null)
+            {
+                return Json(1);
+            }
+            else
+            {
+                return Json(0);
+            }
+        }
+
+        public JsonResult ValidateEmailExistence(string emailData)
+        {
+            System.Threading.Thread.Sleep(200);
+            var SearchData = _dbContext.Users.Where(x => x.Email == emailData).FirstOrDefault();
+            if(SearchData != null)
+            {
+                return Json(1);
+            }
+            else
+            {
+                return Json(0);
+            }
+        }
+
+        public JsonResult ValidatePhoneNumberExistence(string phoneData)
+        {
+            System.Threading.Thread.Sleep(200);
+            var SearchData = _dbContext.Users.Where(x => x.Phone == phoneData).FirstOrDefault();
+            if(SearchData != null)
             {
                 return Json(1);
             }

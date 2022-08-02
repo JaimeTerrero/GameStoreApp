@@ -30,14 +30,16 @@
 
                         <div class="mb-3">
                             <label asp-for="Email" class="form-label">Correo: </label>
-                            <input asp-for="Email" class="form-control" />
+                            <input asp-for="Email" id="Email" onchange="EmailCheck()" class="form-control" />
                             <span asp-validation-for="Email" class="text-danger"></span>
+                            <p id="Show"></p>
                         </div>
 
                         <div class="mb-3">
                             <label asp-for="Phone" class="form-label">Teléfono: </label>
-                            <input asp-for="Phone" class="form-control" />
+                            <input asp-for="Phone" id="Phone" onchange="PhoneCheck()" class="form-control" />
                             <span asp-validation-for="Phone" class="text-danger"></span>
+                            <p id="Check"></p>
                         </div>
 
                         <div class="mb-3">
@@ -60,7 +62,7 @@
                         </div>
 
 
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="submit" class="btn btn-primary" id="Register">Guardar</button>
                         <a asp-controller="User" asp-action="Index" class="btn btn-warning">Volver atrás</a>
 
                     </form>
@@ -73,22 +75,65 @@
 </div>
 <script>
     function UserCheck() {
-        $("#Status").html("Checking....");
+        $("#Status").html("Verificando...");
         $.post("@Url.Action("ValidateUserName","User")",
             {
-                userdata: $("#Username").val()
+                userData: $("#Username").val()
             },
 
             function (data) {
                 if (data == 0) {
-                    $("#Status").html('<font color="Green">Availeble !. you can take it.</font>');
+                    $("#Status").html('<font color="Green">Nombre de usuario disponible.</font>');
                     $("#Username").css("border-color", "Green");
+                    $("Register").prop("disabled", false);
                 }
                 else {
-                    $("#Status").html('<font color="Red">The name is taken. Try Another.</font>');
+                    $("#Status").html('<font color="Red">El usuario ya está registrado. Intente con otro.</font>');
                     $("#Username").css("border-color", "Red");
+                    $("#Register").prop("disabled", true);
                 }
 
             });
+    }
+
+    function EmailCheck(){
+        $("#Show").html("Verificando...");
+        $.post("@Url.Action("ValidateEmailExistence","User")",
+            {
+                emailData: $("#Email").val()
+            },
+
+            function(data) {
+                if (data == 0) {
+                    $("#Show").html('<font color="Green">Correo disponible.</font>');
+                    $("#Email").css("border-color", "Green");
+                    $("#Register").prop("disabled", false);
+                } else {
+                    $("#Show").html('<font color="Red">El correo ya está registrado. Intente con otro</font>');
+                    $("Email").css("border-color", "Red");
+                    $("#Register").prop("disabled", true);
+                }
+            });
+    }
+
+    function PhoneCheck() {
+        $("Check").html("Verificando...");
+        $.post("@Url.Action("ValidatePhoneNumberExistence","User")",
+            {
+                phoneData: $("#Phone").val()
+            },
+
+            function(data) {
+                if (data == 0) {
+                    $("#Check").html('<font color="Green">Número de Télefono disponible</font>');
+                    $("#Phone").css("border-color", "Green");
+                    $("#Register").prop("disabled", true);
+                } else {
+                    $("#Check").html('<font color="Red">El número de Télefono ya está registrado. Intente con otro</font>');
+                    $("#Phone").css("border-color", "Red");
+                    $("#Register").prop("disabled", true);
+                }
+            });
+
     }
 </script>
