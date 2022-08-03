@@ -15,6 +15,7 @@
             <th scope="row">Apellido</th>
             <th scope="row">Teléfono</th>
             <th scope="row">Correo</th>
+            <th scope="row">Rol</th>
         </tr>
     </thead>
     <tbody>
@@ -27,6 +28,7 @@
                 <td scope="row">@item.LastName</td>
                 <td scope="row">@item.Phone</td>
                 <td scope="row">@item.Email</td>
+                <td scope="row">@(item.Id == 1 ? "Admin" : "Cliente")</td>
                 <td scope="row"><a asp-controller="User" asp-action="EditUserInfo" asp-route-id="@item.Id" class="btn btn-primary">Editar</a></td>
                 <td scope="row"><a asp-controller="User" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a></td>
             </tr>
