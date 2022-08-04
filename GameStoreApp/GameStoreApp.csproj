@@ -27,7 +27,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\ClassLibrary1\Database.csproj" />
-    <ProjectReference Include="..\Identity\Identity.csproj" />
   </ItemGroup>
 
   <ItemGroup>
