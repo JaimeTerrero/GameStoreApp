@@ -47,7 +47,7 @@ namespace Application.Services
             {
                 To = user.Email,
                 Subject = "Bienvenido a nuestra tienda GameStoreApp",
-                Body = $"<h1>Sea bienvenido a GameStoreApp</h1> <p>Su usuario es {user.Username}</p>"
+                Body = $"<h1>Sea bienvenido a GameStoreApp.</h1> <p>Su usuario es {user.Username}.</p>"
             });
 
             return userVm;
@@ -116,10 +116,10 @@ namespace Application.Services
 
             return userList.Select(user => new UserViewModel
             {
+                Id = user.Id,
                 Name = user.Name,
                 LastName = user.LastName,
                 Email = user.Email,
-                Id = user.Id,
                 Phone = user.Phone,
                 Username = user.Username,
                 Password = user.Password
