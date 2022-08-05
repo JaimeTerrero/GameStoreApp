@@ -15,6 +15,8 @@ namespace Database
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Inventary> Inventaries { get; set; }
+        public DbSet<SavingProductsInventary> SavingProductsInventaries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +26,8 @@ namespace Database
             modelBuilder.Entity<Product>().ToTable("Products");
             modelBuilder.Entity<Category>().ToTable("Categories");
             modelBuilder.Entity<User>().ToTable("Users");
+            modelBuilder.Entity<Inventary>().ToTable("Inventaries");
+            modelBuilder.Entity<SavingProductsInventary>().ToTable("SavingProductsInventaries");
             #endregion
 
             #region "primary keys"
@@ -43,6 +47,12 @@ namespace Database
                 .HasMany<Product>(user => user.Products)
                 .WithOne(product => product.User)
                 .HasForeignKey(product => product.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Inventary>()
+                .HasMany<SavingProductsInventary>(inventary => inventary.savingProductsInventaries)
+                .WithOne(spi => spi.Inventaries)
+                .HasForeignKey(spi => spi.InventaryId)
                 .OnDelete(DeleteBehavior.Cascade);
             #endregion
 

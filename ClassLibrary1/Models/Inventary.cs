@@ -9,7 +9,9 @@ namespace Database.Models
     public class Inventary
     {
         public int Id { get; set; }
+        public User Users { get; set; }
         public int UserId { get; set; }
         public int Quantity { get; set; }
+        public ICollection<SavingProductsInventary> savingProductsInventaries { get; set; }
     }
 }

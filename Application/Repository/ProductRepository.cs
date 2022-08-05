@@ -42,6 +42,21 @@ namespace Application.Repository
             return await _dbContext.Set<Product>().ToListAsync();
         }
 
+        public async Task<List<Product>> GetAllProducts(int inventaryId)
+        {
+            var product = new List<SavingProductsInventary>();
+            product = await _dbContext.Set<SavingProductsInventary>().ToListAsync();
+            var productInventary = product.Where(x => x.Id == inventaryId);
+            var productList = new List<Product>();
+            foreach(var item in productInventary)
+            {
+                var productSomething = await _dbContext.Products.FirstOrDefaultAsync(x => x.Id == item.Id);
+                productList.Add(productSomething);
+            }
+
+            return productList;
+        }
+
         public async Task<Product> GetByIdAsync(int id)
         {
             return await _dbContext.Set<Product>().FindAsync(id);
