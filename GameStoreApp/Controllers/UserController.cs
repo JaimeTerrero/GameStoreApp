@@ -95,15 +95,19 @@ namespace GameStoreApp.Controllers
             if(SearchData != null)
             {
                 return Json(1);
-            }else if(!EmailValidationProccess(emailData)){
-                return Json(2);
+            }
+            //else if(!EmailValidationProccess(emailData)){
+            //    return Json(2);
+            //}
+            else if(emailData == "")
+            {
+                return Json(3);
             }
             else
             {
                 return Json(0);
             }
         }
-
         public JsonResult ValidatePhoneNumberExistence(string phoneData)
         {
             System.Threading.Thread.Sleep(200);
@@ -118,6 +122,20 @@ namespace GameStoreApp.Controllers
             }
         }
 
+        //public JsonResult MatchingPasswords(string password, string confirmPassword)
+        //{
+        //    System.Threading.Thread.Sleep(200);
+        //    var SearchData = _dbContext.Users.Where(x => x.Password == password).FirstOrDefault();
+        //    var LookForData = _dbContext.Users.Where(x => x.Password == confirmPassword).FirstOrDefault();
+        //    if ( LookForData == SearchData)
+        //    {
+        //        return Json(1);
+        //    }
+        //    else
+        //    {
+        //        return Json(0);
+        //    }
+        //}
         public static bool EmailValidationProccess(string email)
         {
             Regex emailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);

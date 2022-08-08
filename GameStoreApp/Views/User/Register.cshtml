@@ -51,14 +51,15 @@
 
                         <div class="mb-3">
                             <label asp-for="Password" class="form-label">Contraseña: </label>
-                            <input asp-for="Password" class="form-control" />
+                            <input asp-for="Password" id="Password" onchange="MatchingPasswordsCheck()" class="form-control" />
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
 
                         <div class="mb-3">
                             <label asp-for="ConfirmPassword" class="form-label">Confirmar contraseña: </label>
-                            <input asp-for="ConfirmPassword" class="form-control" />
+                            <input asp-for="ConfirmPassword" id="ConfirmPassword" onchange="MatchingPasswordsCheck()" class="form-control" />
                             <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            <p id="Showing"></p>
                         </div>
 
 
@@ -74,6 +75,7 @@
 
 </div>
 <script>
+    
     function UserCheck() {
         $("#Status").html("Verificando...");
         $.post("@Url.Action("ValidateUserName","User")",
@@ -109,11 +111,10 @@
                     $("#Email").css("border-color", "Green");
                     $("#Register").prop("disabled", false);
                 }
-                else if (data == 2) {
-                    $("#Show").html('<font color="Red">Correo inválido</font>');
-                    $("#Email").css("border-color", "Red");
-                    $("#Register").prop("disabled", true);
-                }
+                //else if (data == 2) {
+                //    $("#Show").html('<font color="Red">Correo inválido</font>');
+                //    $("#Email").css("border-color", "Red");
+                //    $("#Register").prop("disabled", true);
                 else {
                     $("#Show").html('<font color="Red">El correo ya está registrado. Intente con otro</font>');
                     $("Email").css("border-color", "Red");
@@ -144,6 +145,26 @@
             });
 
     }
+
+    //function MatchingPasswordsCheck(){
+    //    var password = document.querySelector("#Password").val();
+    //    var confirmPassword = document.querySelector("#ConfirmPassword").val();
+
+    //    $("#Showing").html("Verificando...");
+
+    //        function(password, confirmPassword) {
+    //            if (confirmPassword == password) {
+    //                $("#Showing").html('<font color="Green">Las contraseñas coinciden</font>');
+    //                $("#ConfirmPassword").css("border-color", "Green");
+    //                $("#Register").prop("disabled", false);
+    //            } else {
+    //                $("#Showing").html('<font color="Red">Las contraseñas no coinciden.</font>');
+    //                $("#ConfirmPassword").css("border-color", "Red");
+    //                $("#Register").prop("disabled", true);
+    //            }
+    //        }
+        
+    //}
 
     //function EmailValidationCheck(){
     //    $("#Show").html("Verificando...");
