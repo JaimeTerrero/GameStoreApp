@@ -74,6 +74,7 @@ namespace GameStoreApp.Controllers
             return View(new SaveUserViewModel());
         }
 
+        #region jsonResults
         public JsonResult ValidateUserName(string userData)
         {
             System.Threading.Thread.Sleep(200);
@@ -142,6 +143,7 @@ namespace GameStoreApp.Controllers
 
             return emailRegex.IsMatch(email);
         }
+        #endregion
 
         [HttpPost]
         public async Task<IActionResult> Register(SaveUserViewModel userVm)
@@ -196,6 +198,16 @@ namespace GameStoreApp.Controllers
             await _userService.Delete(id);
 
             return RedirectToRoute(new { controller = "User", action = "SeeAllUsers" });
+        }
+
+        public IActionResult Admin()
+        {
+            if (_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "Home", action = "Index" });
+            }
+
+            return View();
         }
     }
 }

@@ -1,0 +1,50 @@
+﻿@using Application.ViewModels;
+@{
+    ViewData["Title"] = "";
+}
+
+@*<div class="card" style="width: 18rem;">
+  <img src="https://img2.freepng.es/20180408/ese/kisspng-web-development-responsive-web-design-e-commerce-b-ecommerce-5aca70191cbdc3.4581044515232164091177.jpg" class="card-img-top" alt="Product image">
+  <div class="card-body">
+    <h5 class="card-title">Productos</h5>
+    <a asp-controller="Product" asp-action="Index" class="btn btn-primary">Ver Productos</a>
+  </div>
+
+  <img src="https://w7.pngwing.com/pngs/968/543/png-transparent-paper-document-other-categories-miscellaneous-angle-logo-thumbnail.png" class="card-img-top" alt="Product image">
+  <div class="card-body">
+    <h5 class="card-title">Categorías</h5>
+    <a asp-controller="Category" asp-action="Index" class="btn btn-primary">Ver Categorías</a>
+  </div>
+
+  <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" class="card-img-top" alt="User image">
+  <div class="card-body">
+    <h5 class="card-title">Clientes</h5>
+    <a asp-controller="User" asp-action="SeeAllUsers" class="btn btn-primary">Ver Clientes</a>
+  </div>
+
+</div>*@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-9">
+            <div class="row">
+                <div class="col-4">
+                    <div class="mb-4">
+                        <div class="card shadow-sm">
+
+                            <img class="card-img-top img-product-size" src="https://img2.freepng.es/20180408/ese/kisspng-web-development-responsive-web-design-e-commerce-b-ecommerce-5aca70191cbdc3.4581044515232164091177.jpg" alt="Product image"/>
+
+                            <div class="card-body">
+                                <h4>Productos</h4>
+                                <p class="card-text desc"></p>
+                                <div class="d-flex gap-4">
+                                    <a asp-controller="Product" asp-action="Index" class="btn btn-primary">Ver Productos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>              
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

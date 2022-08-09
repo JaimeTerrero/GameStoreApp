@@ -67,7 +67,7 @@ namespace Application.Repository
         {
             string passwordEncrypt = PasswordEncryption.ComputeSha256Hash(loginVm.Password);
             User user = await _dbContext.Set<User>()
-                .FirstOrDefaultAsync(user => user.Username == loginVm.Username && user.Password == passwordEncrypt);
+                .FirstOrDefaultAsync(user => user.Email == loginVm.Email && user.Password == passwordEncrypt /*|| user.Username == loginVm.Username && user.Password == passwordEncrypt*/);
             return user;
         }
     }
