@@ -19,7 +19,7 @@ namespace Application.Services
             _inventaryRepository = new(dbContext);
             _productRepository = new(dbContext);
         }
-        public async Task Add(SaveInventaryViewModel vm)
+        public async Task<InventaryViewModel> Add(SaveInventaryViewModel vm)
         {
             var inventary = await _inventaryRepository.GetByUserId(vm.UserId);
 
@@ -32,7 +32,7 @@ namespace Application.Services
                 
                 inventaryUser.Quantity = 0;
 
-                await _inventaryRepository.AddAsync(inventaryUser);
+               inventary = await _inventaryRepository.AddAsync(inventaryUser);
             }
 
             SavingProductsInventary spi = new();
@@ -43,6 +43,9 @@ namespace Application.Services
             await _inventaryRepository.AddItemToInventary(spi);
             inventary.Quantity += 1;
             await _inventaryRepository.UpdateItem(inventary.Id, inventary);
+
+            return await GetByIdViewModel(inventary.Id);
+
         }
 
         public async Task Delete(int id)
@@ -83,7 +86,27 @@ namespace Application.Services
 
             inventaryViewModel.Products = productList;
 
+            //var products = _inventaryRepository.GetAllProductsByInventary(inventary.Id);
+            //List<ProductViewModel> =
+
             return inventaryViewModel;
+        }
+
+        public async Task<InventaryViewModel> GetByUserId(int id)
+        {
+            var inventary = await _inventaryRepository.GetByUserId(id);
+            if(inventary == null)
+            {
+                return new InventaryViewModel();
+            }
+
+            InventaryViewModel ivm = new();
+            ivm.Id = inventary.Id;
+            ivm.Quantity = inventary.Quantity;
+            ivm.UserId = inventary.UserId;
+
+
+            return ivm;
         }
     }
 }

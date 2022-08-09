@@ -46,11 +46,11 @@ namespace Application.Repository
         {
             var product = new List<SavingProductsInventary>();
             product = await _dbContext.Set<SavingProductsInventary>().ToListAsync();
-            var productInventary = product.Where(x => x.Id == inventaryId);
+            var productInventary = product.Where(x => x.InventaryId == inventaryId);
             var productList = new List<Product>();
             foreach(var item in productInventary)
             {
-                var productSomething = await _dbContext.Products.FirstOrDefaultAsync(x => x.Id == item.Id);
+                var productSomething = await _dbContext.Products.FirstOrDefaultAsync(x => x.Id == item.ProductId);
                 productList.Add(productSomething);
             }
 

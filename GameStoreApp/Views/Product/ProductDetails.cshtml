@@ -1,5 +1,5 @@
 ﻿@using Application.ViewModels;
-@model List<Application.ViewModels.ProductViewModel>
+@model Application.ViewModels.InventaryViewModel
 
 @{
     ViewData["title"] = "Carrito de compras";
@@ -11,11 +11,11 @@
       <div class="col">
         <p><span class="h2">Shopping Cart </span><span class="h4">(1 item in your cart)</span></p>
 
-        @if (Model == null || Model.Count == 0)
+        @if (Model == null || Model.Products.Count == 0)
         {
             <h2>El carrito está vacío</h2>
         }else{
-            @foreach (Application.ViewModels.ProductViewModel item in Model)
+            @foreach (Application.ViewModels.ProductViewModel item in Model.Products)
            {
                <input type="hidden" asp-for="@item.Id"/>
 

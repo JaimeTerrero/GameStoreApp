@@ -1,4 +1,5 @@
-﻿using Application.Services;
+﻿using Application.Helpers;
+using Application.Services;
 using Application.ViewModels;
 using Database;
 using GameStoreApp.Middlewares;
@@ -16,13 +17,15 @@ namespace GameStoreApp.Controllers
         private readonly ProductService _productService;
         private readonly CategoryService _categoryService;
         private readonly ValidateUserSession _validateUserSession;
-
-
+        private readonly InventaryService _inventaryService;
+        private readonly UserViewModel user;
         public ProductController(ApplicationContext dbContext, ValidateUserSession validateUserSession, IHttpContextAccessor httpContextAccessor)
         {
             _productService = new(dbContext, httpContextAccessor);
             _categoryService = new(dbContext, httpContextAccessor);
             _validateUserSession = validateUserSession;
+            _inventaryService = new(dbContext);
+            user = httpContextAccessor.HttpContext.Session.Get<UserViewModel>("user");
         }
         public async Task<IActionResult> Index()
         {
@@ -196,21 +199,41 @@ namespace GameStoreApp.Controllers
                 return RedirectToRoute(new { controller = "User", action = "Index" });
             }
 
-            SaveProductViewModel vm = new();
+            SaveProductViewModel vm = await _productService.GetByIdViewModel(id);
 
-            return View("ShowProduct", await _productService.Add(vm));
+            return View("ShowProduct", vm);
         }
 
+        //Carrito de compras
         public async Task<IActionResult> ProductDetails(int id)
         {
             if (!_validateUserSession.HasUser())
             {
                 return RedirectToRoute(new { controller = "User", action = "Index" });
             }
+
              
-            return View("ProductDetails", await _productService.GetAllViewModel());
+            return View("ProductDetails", await _inventaryService.GetByIdViewModel(user.Id));
         }
 
+
+        public async Task<IActionResult> AddToCart(int id)
+        {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
+            var cart = await _inventaryService.GetByUserId(user.Id); 
+            SaveInventaryViewModel sivm = new();
+            sivm.InventaryId = cart.Id;
+            sivm.UserId = user.Id;
+            sivm.ProductId = id;
+
+            await _inventaryService.Add(sivm);
+
+            return RedirectToAction("ProductDetails", sivm.InventaryId);
+        }
         #region private methods
         private string UploadFile(IFormFile file, int id, bool isEditMode = false, string imageUrl = "")
         {

@@ -25,10 +25,11 @@ namespace Application.Repository
             return inventary;
         }
 
-        public async Task AddItemToInventary(SavingProductsInventary savingProductsInventary)
+        public async Task<SavingProductsInventary> AddItemToInventary(SavingProductsInventary savingProductsInventary)
         {
             await _dbContext.SavingProductsInventaries.AddAsync(savingProductsInventary);
             await _dbContext.SaveChangesAsync();
+            return savingProductsInventary;
         }
 
         public async Task UpdateItem(int id, Inventary inventary)
@@ -57,7 +58,9 @@ namespace Application.Repository
         public async Task<Inventary> GetByUserId(int id)
         {
             var result = await _dbContext.Set<Inventary>().ToListAsync();
-            return result.Where(x => x.UserId == id).FirstOrDefault();
+            result = result.Where(x => x.UserId == id).ToList();
+            Inventary inventary = result[0];
+            return inventary;
         }
 
         public virtual async Task<List<Inventary>> GetAllWithIncludeAsync(List<string> properties)
