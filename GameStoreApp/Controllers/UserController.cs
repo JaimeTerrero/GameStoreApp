@@ -9,6 +9,7 @@ using System.Linq;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Http;
 
 namespace GameStoreApp.Controllers
 {
@@ -18,12 +19,14 @@ namespace GameStoreApp.Controllers
         private readonly UserService _userService;
         private readonly ValidateUserSession _validateUserSession;
         private readonly ApplicationContext _dbContext;
+        private readonly UserViewModel user;
 
-        public UserController(ApplicationContext dbContext, ValidateUserSession validateUserSession, IEmailService emailService)
+        public UserController(ApplicationContext dbContext, ValidateUserSession validateUserSession, IEmailService emailService, IHttpContextAccessor httpContextAccessor)
         {
             _userService = new(dbContext,emailService);
             _validateUserSession = validateUserSession;
             _dbContext = dbContext;
+            user = httpContextAccessor.HttpContext.Session.Get<UserViewModel>("user");
         }
         public IActionResult Index()
         {
@@ -202,12 +205,12 @@ namespace GameStoreApp.Controllers
 
         public IActionResult Admin()
         {
-            if (_validateUserSession.HasUser())
+            if (!_validateUserSession.HasUser())
             {
                 return RedirectToRoute(new { controller = "Home", action = "Index" });
             }
 
-            return View();
+            return View("Admin");
         }
     }
 }

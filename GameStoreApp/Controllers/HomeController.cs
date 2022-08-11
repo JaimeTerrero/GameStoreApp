@@ -41,5 +41,15 @@ namespace GameStoreApp.Controllers
             ViewBag.Categories = vm.Categories;
             return View(await _productService.GetAllViewModelWithFilters(filterProductViewModel));
         }
+
+        public IActionResult Admin()
+        {
+            if (_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
+            return View();
+        }
     }
 }
