@@ -4,8 +4,7 @@
         ViewData["Title"] = "LogIn";
     }*@
 
-@{ Layout = null; 
-   }
+@{ Layout = null; }
 <html>
 <head>
     <meta charset="UTF-8">
@@ -50,9 +49,10 @@
                                 <label asp-for="Password" class="form-label">Contraseña</label>
                                 <input class="form-control" asp-for="Password" />
                             </div>*@
-                    </div>
-                    <div class="formDiv" style="transition-delay: 0.6s">
-                        <button class="acceptBtn" type="submit">Iniciar Sesión</button>
+
+                        <div class="formDiv" style="transition-delay: 0.6s">
+                            <button class="acceptBtn" type="submit">Iniciar Sesión</button><span class="register">Need an account?<a asp-controller="User" asp-action="Register">Register</a></span>
+                        </div>
                     </div>
                 </form>
 

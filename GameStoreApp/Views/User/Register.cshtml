@@ -1,81 +1,106 @@
 ﻿@model Application.ViewModels.SaveUserViewModel
-@{
-    ViewData["Title"] = "Nuevo usuario";
+@*@{
+        ViewData["Title"] = "LogIn";
+    }*@
 
-}
+@{ Layout = null; }
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GAMES STORE </title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 
-<div class="container-fluid">
-
-    <div class="row">
-        <div class="col-6 offset-3">
-            <div class="card">
-                <div class="card-header bg-dark text-light">
-                    <h4 class="text-center">Creando un nuevo usuario</h4>
-                </div>
-                <div class="card-body">
-
-                    <form method="post" asp-controller="User" asp-action="Register">
-
-                        <div class="mb-3">
-                            <label asp-for="Name" class="form-label">Nombre: </label>
-                            <input asp-for="Name" class="form-control" />
-                            <span asp-validation-for="Name" class="text-danger"></span>
-                        </div>
-
-                        <div class="mb-3">
-                            <label asp-for="LastName" class="form-label">Apellido: </label>
-                            <input asp-for="LastName" class="form-control" />
-                            <span asp-validation-for="LastName" class="text-danger"></span>
-                        </div>
-
-                        <div class="mb-3">
-                            <label asp-for="Email" class="form-label">Correo: </label>
-                            <input asp-for="Email" id="Email" onchange="EmailCheck()" class="form-control" />
-                            <span asp-validation-for="Email" class="text-danger"></span>
-                            <p id="Show"></p>
-                        </div>
-
-                        <div class="mb-3">
-                            <label asp-for="Phone" class="form-label">Teléfono: </label>
-                            <input asp-for="Phone" id="Phone" onchange="PhoneCheck()" class="form-control" />
-                            <span asp-validation-for="Phone" class="text-danger"></span>
-                            <p id="Check"></p>
-                        </div>
-
-                        <div class="mb-3">
-                            <label asp-for="Username" class="form-label">Nombre de usuario: </label>
-                            <input asp-for="Username" id="Username" onchange="UserCheck()" class="form-control" />
-                            <span asp-validation-for="Username" class="text-danger"></span>
-                            <p id="Status"></p>
-                        </div>
-
-                        <div class="mb-3">
-                            <label asp-for="Password" class="form-label">Contraseña: </label>
-                            <input asp-for="Password" id="Password" onchange="MatchingPasswordsCheck()" class="form-control" />
-                            <span asp-validation-for="Password" class="text-danger"></span>
-                        </div>
-
-                        <div class="mb-3">
-                            <label asp-for="ConfirmPassword" class="form-label">Confirmar contraseña: </label>
-                            <input asp-for="ConfirmPassword" id="ConfirmPassword" onchange="MatchingPasswordsCheck()" class="form-control" />
-                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                            <p id="Showing"></p>
-                        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.js" integrity="sha256-mkdmXjMvBcpAyyFNCVdbwg4v+ycJho65QLDwVE3ViDs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="~/dist/style.css" />
 
 
-                        <button type="submit" class="btn btn-primary" id="Register">Guardar</button>
-                        <a asp-controller="User" asp-action="Index" class="btn btn-warning">Volver atrás</a>
+</head>
+<body>
+    <div id="container">
+        <div id="inviteContainer">
+            <div class="acceptContainer">
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        @*<div class="card">*@
+                        @*<div class="card-header bg-dark text-light">
+                                <h4 class="text-center">Creando un nuevo usuario</h4>
+                            </div>
+                            <div class="card-body">*@
 
-                    </form>
+                        <form method="post" asp-controller="User" asp-action="Register">
+                            <h1>GAMES STORE</h1>
+                            <div class="formContainer">
+                                <div class="formDiv" style="transition-delay: 0.2s">
+                                    <p>Nombre:</p>
+                                    @*<label asp-for="Name" class="form-label">Nombre: </label>*@
+                                    <input type="text" asp-for="Name" class="form-control" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                    @*</div>
 
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Apellido:</p>
+                                    @*<label asp-for="LastName" class="form-label">Apellido: </label>*@
+                                    <input type="text" asp-for="LastName" class="form-control" />
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Email:</p>
+                                    @*<label asp-for="Email" class="form-label">Correo: </label>*@
+                                    <input type="text" asp-for="Email" id="Email" onchange="EmailCheck()" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                    <p id="Show"></p>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Teléfono:</p>
+                                    @*<label asp-for="Phone" class="form-label">Teléfono: </label>*@
+                                    <input type="number" asp-for="Phone" id="Phone" onchange="PhoneCheck()" class="form-control" />
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                    <p id="Check"></p>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Nombre de Usuario:</p>
+                                    @*<label asp-for="Username" class="form-label">Nombre de usuario: </label>*@
+                                    <input type="text" asp-for="Username" id="Username" onchange="UserCheck()" class="form-control" />
+                                    <span asp-validation-for="Username" class="text-danger"></span>
+                                    <p id="Status"></p>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Contraseña:</p>
+                                    @*<label asp-for="Password" class="form-label">Contraseña: </label>*@
+                                    <input type="text" asp-for="Password" id="Password" onchange="MatchingPasswordsCheck()" class="form-control" />
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Confirmar contraseña:</p>
+                                    @*<label asp-for="ConfirmPassword" class="form-label">Confirmar contraseña: </label>*@
+                                    <input type="text" asp-for="ConfirmPassword" id="ConfirmPassword" onchange="MatchingPasswordsCheck()" class="form-control" />
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    <p id="Showing"></p>
+                                </div>
+
+                                <div class="formDiv" style="transition-delay: 0.6s">
+                                    <button type="submit" class="accordion-button" id="Register">Guardar</button>
+                                    <a asp-controller="User" asp-action="Index" class="btn btn-warning">Volver atrás</a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    @*</div>*@
                 </div>
             </div>
         </div>
-    </div>
 
-</div>
-<script>
-    
+    </div>
+    <script>
+
     function UserCheck() {
         $("#Status").html("Verificando...");
         $.post("@Url.Action("ValidateUserName","User")",
@@ -163,7 +188,7 @@
     //                $("#Register").prop("disabled", true);
     //            }
     //        }
-        
+
     //}
 
     //function EmailValidationCheck(){
@@ -171,7 +196,7 @@
     //    $.post("@Url./*Action("IsEmailValid","User")*/", {
     //        email: $("Email").val()
     //    },
-        
+
     //    function(data){
     //        if (data == 0) {
     //            $("#Show").html('<font color="Green">Correo válido</font>');
@@ -186,4 +211,8 @@
     //    }
     //    )
     //}
-</script>
+    </script>
+
+    <script src="~/dist/script.js"></script>
+</body>
+</html>
