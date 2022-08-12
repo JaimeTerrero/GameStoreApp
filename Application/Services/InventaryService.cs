@@ -29,10 +29,10 @@ namespace Application.Services
 
             if (inventary == null)
             {
-                
+
                 inventaryUser.Quantity = 0;
 
-               inventary = await _inventaryRepository.AddAsync(inventaryUser);
+                inventary = await _inventaryRepository.AddAsync(inventaryUser);
             }
 
             SavingProductsInventary spi = new();
@@ -58,7 +58,7 @@ namespace Application.Services
         {
             var inventary = await _inventaryRepository.GetByUserId(userId);
 
-            if(inventary == null)
+            if (inventary == null)
             {
                 return null;
             }
@@ -72,7 +72,7 @@ namespace Application.Services
             inventaryViewModel.UserId = inventary.UserId;
 
             var productList = new List<ProductViewModel>();
-            foreach(var item in product)
+            foreach (var item in product)
             {
                 ProductViewModel pvm = new();
                 pvm.Id = item.Id;
@@ -95,7 +95,7 @@ namespace Application.Services
         public async Task<InventaryViewModel> GetByUserId(int id)
         {
             var inventary = await _inventaryRepository.GetByUserId(id);
-            if(inventary == null)
+            if (inventary == null)
             {
                 return new InventaryViewModel();
             }

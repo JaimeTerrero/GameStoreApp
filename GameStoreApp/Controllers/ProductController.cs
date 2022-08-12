@@ -224,7 +224,7 @@ namespace GameStoreApp.Controllers
                 return RedirectToRoute(new { controller = "User", action = "Index" });
             }
 
-            var cart = await _inventaryService.GetByUserId(user.Id); 
+            var cart = await _inventaryService.GetByUserId(user.Id);
             SaveInventaryViewModel sivm = new();
             sivm.InventaryId = cart.Id;
             sivm.UserId = user.Id;

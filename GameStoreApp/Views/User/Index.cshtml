@@ -1,33 +1,70 @@
 ﻿@using Application.ViewModels
 @model LoginViewModel
-@{
-    ViewData["Title"] = "LogIn";
-}
+@*@{
+        ViewData["Title"] = "LogIn";
+    }*@
 
-<div class="container-fluid">
+@{ Layout = null; 
+   }
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GAMES STORE </title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 
-    <div class="row mt-5">
-        <div class="col-6 offset-3">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    @Html.ValidationSummary(false,"",new {@class = "text-danger"})
-                    <form method="post" asp-controller="User" asp-action="Index">
-                        <div class="mb-3">
-                            <label asp-for="Email" class="form-label">Correo Electrónico</label>
-                            <input class="form-control" asp-for="Email"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.js" integrity="sha256-mkdmXjMvBcpAyyFNCVdbwg4v+ycJho65QLDwVE3ViDs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="~/dist/style.css" />
+
+
+</head>
+<body>
+    <div id="container">
+        <div id="inviteContainer">
+            <div class="logoContainer"><img class="logo" src="~/dist/IMG/logo.png" /></div>
+            <div class="acceptContainer">
+                @*<div class="row mt-5">
+                    <div class="col-6 offset-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">*@
+
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                <form method="post" asp-controller="User" asp-action="Index">
+                    <h1>GAMES STORE</h1>
+                    <div class="formContainer">
+                        <div class="formDiv" style="transition-delay: 0.2s">
+                            <p>EMAIL</p>
+                            <input type="email" asp-for="Email" />
                         </div>
-                        <div class="mb-3">
-                            <label asp-for="Password" class="form-label">Contraseña</label>
-                            <input class="form-control" asp-for="Password"/>
-                        </div>
 
-                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                    </form>
+                        @*<div class="mb-3">
+                                <label asp-for="Email" class="form-label">Correo Electrónico</label>
+                                <input class="form-control" asp-for="Email" />
+                            </div>*@
+                        <div class="formDiv" style="transition-delay: 0.4s">
+                            <p>PASSWSORD</p>
+                            <input type="password" asp-for="Password" />
+                        </div>
+                        @**<div class="mb-3">
+                                <label asp-for="Password" class="form-label">Contraseña</label>
+                                <input class="form-control" asp-for="Password" />
+                            </div>*@
+                    </div>
+                    <div class="formDiv" style="transition-delay: 0.6s">
+                        <button class="acceptBtn" type="submit">Iniciar Sesión</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+    @*</div>
 
                 </div>
             </div>
-            
-        </div>
-    </div>
-    
-</div>
+        </div>*@
+    <script src="./dist/script.js"></script>
+</body>
+</html>
