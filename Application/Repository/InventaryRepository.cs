@@ -59,6 +59,10 @@ namespace Application.Repository
         {
             var result = await _dbContext.Set<Inventary>().ToListAsync();
             result = result.Where(x => x.UserId == id).ToList();
+            if(result.Count == 0)
+            {
+                return null;
+            }
             Inventary inventary = result[0];
             return inventary;
         }

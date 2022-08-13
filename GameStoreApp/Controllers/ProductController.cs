@@ -226,12 +226,23 @@ namespace GameStoreApp.Controllers
 
             var cart = await _inventaryService.GetByUserId(user.Id);
             SaveInventaryViewModel sivm = new();
-            sivm.InventaryId = cart.Id;
-            sivm.UserId = user.Id;
-            sivm.ProductId = id;
+            if (cart == null || cart.Id == 0)
+            {
+                sivm.UserId = user.Id;
+                sivm.ProductId = id;
 
-            await _inventaryService.Add(sivm);
+                await _inventaryService.Add(sivm);
+            }
+            else
+            {
+                sivm.UserId = user.Id;
+                sivm.InventaryId = cart.Id;
+                sivm.ProductId = id;
 
+                await _inventaryService.Add(sivm);
+            }
+
+            
             return RedirectToAction("ProductDetails", sivm.InventaryId);
         }
         #region private methods

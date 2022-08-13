@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj": {}
+    "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\Application\\Application.csproj": {
+    "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\delvi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\Application\\obj\\",
+        "projectPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\delvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jaime David Terrero\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj": {
-                "projectPath": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj"
+              "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj": {
+                "projectPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj"
               }
             }
           }
@@ -88,24 +88,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj": {
+    "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj",
+        "projectUniqueName": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj",
-        "packagesPath": "C:\\Users\\delvi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\ClassLibrary1\\obj\\",
+        "projectPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj",
+        "packagesPath": "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\delvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jaime David Terrero\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -166,24 +166,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj": {
+    "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj",
+        "projectUniqueName": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj",
         "projectName": "GameStoreApp",
-        "projectPath": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj",
-        "packagesPath": "C:\\Users\\delvi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\GameStoreApp\\obj\\",
+        "projectPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj",
+        "packagesPath": "C:\\Users\\Jaime David Terrero\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\GameStoreApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\delvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jaime David Terrero\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -198,11 +198,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\Application\\Application.csproj"
+              "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\Application\\Application.csproj"
               },
-              "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj": {
-                "projectPath": "C:\\Users\\delvi\\OneDrive\\Documents\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj"
+              "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj": {
+                "projectPath": "C:\\Users\\Jaime David Terrero\\OneDrive\\Documentos\\GitHub\\GameStoreApp\\ClassLibrary1\\Database.csproj"
               }
             }
           }
@@ -260,7 +260,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -35,6 +35,7 @@ namespace Application.Services
                 inventary = await _inventaryRepository.AddAsync(inventaryUser);
             }
 
+
             SavingProductsInventary spi = new();
 
             spi.ProductId = vm.ProductId;
@@ -97,7 +98,7 @@ namespace Application.Services
             var inventary = await _inventaryRepository.GetByUserId(id);
             if (inventary == null)
             {
-                return new InventaryViewModel();
+                return null;
             }
 
             InventaryViewModel ivm = new();

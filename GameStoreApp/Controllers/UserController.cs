@@ -126,12 +126,12 @@ namespace GameStoreApp.Controllers
             }
         }
 
-        //public JsonResult MatchingPasswords(string password, string confirmPassword)
+        //public JsonResult MatchingPasswords(string password)
         //{
         //    System.Threading.Thread.Sleep(200);
         //    var SearchData = _dbContext.Users.Where(x => x.Password == password).FirstOrDefault();
-        //    var LookForData = _dbContext.Users.Where(x => x.Password == confirmPassword).FirstOrDefault();
-        //    if ( LookForData == SearchData)
+        //    var algo = _saveUserViewModel;
+        //    if (SearchData != null)
         //    {
         //        return Json(1);
         //    }

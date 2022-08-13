@@ -150,7 +150,7 @@
     }
 
     function PhoneCheck() {
-        $("Check").html("Verificando...");
+        $("#Check").html("Verificando...");
         $.post("@Url.Action("ValidatePhoneNumberExistence","User")",
             {
                 phoneData: $("#Phone").val()
@@ -158,7 +158,7 @@
 
             function(data) {
                 if (data == 0) {
-                    $("#Check").html('<font color="Green">Número de Télefono disponible</font>');
+                    $("#Check").html('<font color="Green">Número de télefono disponible</font>');
                     $("#Phone").css("border-color", "Green");
                     $("#Register").prop("disabled", false);
                 }
