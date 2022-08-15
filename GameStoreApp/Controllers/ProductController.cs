@@ -245,6 +245,30 @@ namespace GameStoreApp.Controllers
             
             return RedirectToAction("ProductDetails", sivm.InventaryId);
         }
+
+        public async Task<IActionResult> DeleteFromCart(int id) {
+
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
+            return View(await _inventaryService.GetByIdViewModel(id));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteFromCartPost(int id)
+        {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
+            await _inventaryService.Delete(id);
+
+            return RedirectToRoute(new { controller = "Product", action = "ProductDetails" });
+        }
+
         #region private methods
         private string UploadFile(IFormFile file, int id, bool isEditMode = false, string imageUrl = "")
         {
