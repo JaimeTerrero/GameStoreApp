@@ -87,9 +87,6 @@ namespace Application.Services
 
             inventaryViewModel.Products = productList;
 
-            //var products = _inventaryRepository.GetAllProductsByInventary(inventary.Id);
-            //List<ProductViewModel> =
-
             return inventaryViewModel;
         }
 
