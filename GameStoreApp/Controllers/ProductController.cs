@@ -269,6 +269,16 @@ namespace GameStoreApp.Controllers
             return RedirectToRoute(new { controller = "Product", action = "ProductDetails" });
         }
 
+        public IActionResult Payment()
+        {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
+            return View();
+        }
+
         #region private methods
         private string UploadFile(IFormFile file, int id, bool isEditMode = false, string imageUrl = "")
         {

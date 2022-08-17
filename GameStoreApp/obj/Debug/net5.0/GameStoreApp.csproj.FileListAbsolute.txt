@@ -902,3 +902,4 @@ C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\GameStoreApp.StaticWebAssets.xml
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\DeleteFromCart.cshtml.g.cs
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\DeleteFromCart.cshtml.g.cs
+C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Payment.cshtml.g.cs
