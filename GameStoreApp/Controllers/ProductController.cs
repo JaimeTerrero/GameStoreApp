@@ -264,7 +264,7 @@ namespace GameStoreApp.Controllers
                 return RedirectToRoute(new { controller = "User", action = "Index" });
             }
 
-            await _inventaryService.Delete(id);
+            await _inventaryService.DeleteFromCart(id);
 
             return RedirectToRoute(new { controller = "Product", action = "ProductDetails" });
         }

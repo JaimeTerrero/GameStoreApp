@@ -55,6 +55,12 @@ namespace Application.Services
             await _inventaryRepository.DeleteAsync(inventary);
         }
 
+        public async Task DeleteFromCart(int id)
+        {
+            var inventary = await _inventaryRepository.GetByIdInventary(id);
+            await _inventaryRepository.DeleteAsyncFromCart(inventary);
+        }
+
         public async Task<InventaryViewModel> GetByIdViewModel(int userId)
         {
             var inventary = await _inventaryRepository.GetByUserId(userId);
@@ -65,12 +71,15 @@ namespace Application.Services
             }
 
             var product = await _productRepository.GetAllProducts(inventary.Id);
+            var spi = await _inventaryRepository.GetAllSavingProductsInventary();
+            var algo = spi.Where(x => x.InventaryId == inventary.Id).ToList();
 
             InventaryViewModel inventaryViewModel = new();
 
             inventaryViewModel.Id = inventary.Id;
             inventaryViewModel.Quantity = inventary.Quantity;
             inventaryViewModel.UserId = inventary.UserId;
+            inventaryViewModel.SavingProductsInventaries = new();
 
             var productList = new List<ProductViewModel>();
             foreach (var item in product)
@@ -83,6 +92,15 @@ namespace Application.Services
                 pvm.Name = item.Name;
                 pvm.Price = item.Price;
                 productList.Add(pvm);
+            }
+            foreach(var item in algo)
+            {
+                SavingProductsInventaryViewModel pvm = new();
+                pvm.Id = item.Id;
+                pvm.InventaryId = item.InventaryId;
+                pvm.ProductId = item.ProductId;
+
+                inventaryViewModel.SavingProductsInventaries.Add(pvm);
             }
 
             inventaryViewModel.Products = productList;

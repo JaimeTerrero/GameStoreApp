@@ -45,6 +45,17 @@ namespace Application.Repository
             await _dbContext.SaveChangesAsync();
         }
 
+        public async Task DeleteAsyncFromCart(SavingProductsInventary spi)
+        {
+            _dbContext.Set<SavingProductsInventary>().Remove(spi);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<List<SavingProductsInventary>> GetAllSavingProductsInventary()
+        {
+            return await _dbContext.Set<SavingProductsInventary>().ToListAsync();
+        }
+
         public async Task<List<Inventary>> GetAllAsync()
         {
             return await _dbContext.Set<Inventary>().ToListAsync();
@@ -66,6 +77,11 @@ namespace Application.Repository
             Inventary inventary = result[0];
             return inventary;
         }
+
+        public async Task<SavingProductsInventary> GetByIdInventary(int id)
+        {
+            return await _dbContext.Set<SavingProductsInventary>().FindAsync(id);
+        } 
 
         public virtual async Task<List<Inventary>> GetAllWithIncludeAsync(List<string> properties)
         {

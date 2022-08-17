@@ -10,6 +10,7 @@ namespace Application.ViewModels
     {
         public int Id { get; set; }
         public List<ProductViewModel> Products { get; set; }
+        public List<SavingProductsInventaryViewModel> SavingProductsInventaries { get; set; }
         public int UserId { get; set; }
         public int Quantity { get; set; }
     }

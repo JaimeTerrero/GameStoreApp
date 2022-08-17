@@ -57,7 +57,8 @@
                           <div class="col-md-2 d-flex justify-content-center">
                               <div>
                                   <p class="small text-muted mb-4 pb-2">Acción</p>
-                                  <a asp-controller="Product" asp-action="DeleteFromCart" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                                  <a asp-controller="Product" asp-action="DeleteFromCart" asp-route-id="@Model.SavingProductsInventaries.FirstOrDefault(x => x.ProductId == @item.Id).Id" 
+                                      class="btn btn-danger">Eliminar</a>
                               </div>
                           </div>
                           <div class="col-md-2 d-flex justify-content-center">
