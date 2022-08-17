@@ -3,7 +3,8 @@
 
 @{
     ViewData["title"] = "Carrito de compras";
-    int index = 1;
+    int index = 0;
+    double sum = 0;
 }
 
 <section class="vh-100" style="background-color: #fdccbc;">
@@ -71,8 +72,9 @@
                       </div>
 
                   </div>
-               </div>
+                </div>
                 index++;
+                sum += @item.Price;
 
             }
         }
@@ -84,7 +86,7 @@
             <div class="float-end">
               <p class="mb-0 me-5 d-flex align-items-center">
                 <span class="small text-muted me-2">Order total:</span> <span
-                  class="lead fw-normal">$799</span>
+                  class="lead fw-normal">$@sum</span>
               </p>
             </div>
 
