@@ -269,7 +269,7 @@ namespace GameStoreApp.Controllers
             return RedirectToRoute(new { controller = "Product", action = "ProductDetails" });
         }
 
-        public IActionResult Payment()
+        public IActionResult Payment(int id)
         {
             if (!_validateUserSession.HasUser())
             {
