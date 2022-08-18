@@ -129,8 +129,7 @@ namespace GameStoreApp.Controllers
                 return RedirectToRoute(new { controller = "User", action = "Index" });
             }
 
-            /*Aquí no tuvimos que retornar el nombre de la vista porque el
-             nombre del método es el mismo que el de la vista*/
+            
             return View(await _productService.GetByIdViewModel(id));
         }
 
@@ -269,15 +268,23 @@ namespace GameStoreApp.Controllers
             return RedirectToRoute(new { controller = "Product", action = "ProductDetails" });
         }
 
-        public IActionResult Payment(int id)
+        public async Task<IActionResult> Payment(int id)
         {
             if (!_validateUserSession.HasUser())
             {
                 return RedirectToRoute(new { controller = "User", action = "Index" });
             }
 
-            return View();
+            return View(await _inventaryService.GetByUserId2(id));
         }
+
+        //public async Task<IActionResult> PaymentPost(int id)
+        //{
+        //    if (!_validateUserSession.HasUser())
+        //    {
+        //        return RedirectToRoute(new { controller = "User", action = "Index" });
+        //    }
+        //}
 
         #region private methods
         private string UploadFile(IFormFile file, int id, bool isEditMode = false, string imageUrl = "")

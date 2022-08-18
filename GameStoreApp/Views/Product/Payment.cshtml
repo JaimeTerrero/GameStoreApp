@@ -1,5 +1,5 @@
 ﻿@using Application.ViewModels;
-@model Application.ViewModels.InventaryViewModel;
+@model Application.ViewModels.SaveInventaryViewModel;
 
 @{
     ProductViewModel pvm = new();
@@ -12,6 +12,7 @@
 
 <div class="container-fluid">
         <div class="card px-4">
+        
             <p class="h8 py-3">Detalles de pago</p>
                 <div class="row gx-3">
                     <div class="col-12">
@@ -40,13 +41,14 @@
                     </div>
                     <div class="col-12">
                         <div class="btn btn-primary mb-3">
-                            <span class="ps-3">Pagar</span>
+                            <span class="ps-3">Pagar </span>
                             <span class="fas fa-arrow-right"></span>
                         </div>
                     </div>
 
-                    <input type="hidden" asp-for="Id"/>
+                    <input type="hidden" asp-for="UserId"/>
                 </div>
+                
         </div>
     </div>
 

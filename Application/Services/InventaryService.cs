@@ -124,5 +124,23 @@ namespace Application.Services
 
             return ivm;
         }
+
+        public async Task<SaveInventaryViewModel> GetByUserId2(int id)
+        {
+            var inventary = await _inventaryRepository.GetByUserId(id);
+            if (inventary == null)
+            {
+                return null;
+            }
+
+            SaveInventaryViewModel ivm = new();
+            ivm.InventaryId = inventary.Id;
+            ivm.ProductId = inventary.Quantity;
+            ivm.UserId = inventary.UserId;
+
+
+            return ivm;
+        }
+
     }
 }
