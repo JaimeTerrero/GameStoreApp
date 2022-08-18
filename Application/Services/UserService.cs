@@ -46,8 +46,8 @@ namespace Application.Services
             await _emailService.SendAsync(new EmailRequest
             {
                 To = user.Email,
-                Subject = "Bienvenido a nuestra tienda GameStoreApp",
-                Body = $"<h1>Sea bienvenido a GameStoreApp.</h1> <p>Su usuario es {user.Username}.</p>"
+                Subject = "Creación de usuario",
+                Body = $"<h1>Sea bienvenido a GameStoreApp. Dele un vistazo a todos los productos disponibles https://localhost:44309/."
             });
 
             return userVm;
