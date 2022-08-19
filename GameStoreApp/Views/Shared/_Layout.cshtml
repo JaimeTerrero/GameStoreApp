@@ -1,6 +1,9 @@
-﻿@using Microsoft.AspNetCore.Http;
+﻿
+@using Microsoft.AspNetCore.Http;
 @using Application.Helpers;
 @using Application.ViewModels;
+
+
 @inject IHttpContextAccessor httpContext;
 @{
     UserViewModel user = httpContext.HttpContext.Session.Get<UserViewModel>("user");
@@ -14,80 +17,86 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 custom-nav">
             <div class="container">
-                <a class="navbar-brand text-white fw-bold" asp-area="" asp-controller="@(user != null ? "Home" : "User")" asp-action="Index">Games Store</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a style="margin-right: 14em" class="navbar-brand text-warning fw-bold mr-3 " asp-area=""
+                    asp-controller="@(user != null ? " Home" : "User" )" asp-action="Index">Games Store</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         @if (user != null) //Si es un usuario logueado mostrará estás opciones, de lo contrario no lo hara.
                         {
-                            if (user.Id == 1)
-                            {
+                        if (user.Id == 1)
+                        {
+                        <li style="margin-right: 5em" class="nav-item">
+                            <a class="nav-link text-white fw-bold" asp-area="" asp-controller="@(user != null ? " Home"
+                                : "User" )" asp-action="Index">Home</a>
+                        </li>
 
-                                @*<li class="nav-item">
-                                    <a class="nav-link text-white fw-bold" asp-controller="Product" asp-action="Index">Productos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white fw-bold" asp-controller="Category" asp-action="Index">Categorías</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="SeeAllUsers">Usuarios</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white fw-bold" asp-controller="Product" asp-action="ProductDetails">Carrito de compras</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión</a>
-                                </li>*@
-                                <li class="nav-item">
-                                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="Admin">Acciones</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión (@user.Name @user.LastName)</a>
-                                </li>
-                            }
-                            else
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-white fw-bold" asp-controller="Product" asp-action="ProductDetails">Carrito de compras</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión (@user.Name @user.LastName) </a>
-                                </li>
-                            }
-
+                        <li style="margin-right: 20em" class="nav-item">
+                            <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="Admin">Acciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión
+                                (@user.Name @user.LastName)</a>
+                        </li>
                         }
                         else
                         {
-                            <li class="nav-item">
-                                @*De no estar logueado solo mostraá la opción de Registrarse*@
-                                <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="Register">Registrate!</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold" asp-controller="Product"
+                                asp-action="ProductDetails">Carrito de compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión
+                                (@user.Name @user.LastName) </a>
+                        </li>
+                        }
+                        }
+                        else
+                        {
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold" asp-controller="User"
+                                asp-action="Register">Registrate!</a>
+                        </li>
                         }
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="bg-layout container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    @*<footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; @DateTime.Now.Year - Games Store
+    <footer style="bottom:0;height:130px;">
+        <div class="flex">
+            <small>Copyright &copy; 2022 All rights reserved | Grupo 8 <span class="footer-heart">&#9829;</span>
+            </small>
+            <ul>
+                <li>
+                    <a class="nav-link text-white fw-bold" asp-area="" asp-controller="@(user != null ? " Home" : "User" )"
+                        asp-action="Index">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="Admin">Acciones</a>
+                </li>
+                <li>
+                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión
+                        (@user.Name @user.LastName) </a>
+                </li>
+            </ul>
         </div>
-    </footer>*@
+    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
