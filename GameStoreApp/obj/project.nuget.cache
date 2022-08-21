@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/ccanjJTk3sqVsVoDZ3hKlNZbRNwzu0ZAiDMalW/Clk3/DdWU0TLDR1RFzwoNJRV1ed+ggjqC9hWhx8oBHHUMw==",
+  "dgSpecHash": "75ytDpc2ZuseDdFx9miGe3dYNuZbNCSwDKmy0EgXVKzOAitXl0azCE2jYRHD0SjNztDuXWkHOQf8CzqCLDHrvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elvis\\Source\\Repos\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj",
+  "projectFilePath": "C:\\Users\\elvis\\source\\repos\\GameStoreApp\\GameStoreApp\\GameStoreApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elvis\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\elvis\\.nuget\\packages\\mailkit\\3.3.0\\mailkit.3.3.0.nupkg.sha512",

@@ -24,8 +24,8 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 custom-nav">
             <div class="container">
-                <a style="margin-right: 14em" class="navbar-brand text-warning fw-bold mr-3 " asp-area=""
-                    asp-controller="@(user != null ? " Home" : "User" )" asp-action="Index">Games Store</a>
+
+                <a style="margin-right: 14em" class="navbar-brand text-warning fw-bold" asp-area="" asp-controller="@(user != null ? "Home" : "User")" asp-action="Index">Games Store</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,9 +37,8 @@
                         if (user.Id == 1)
                         {
                         <li style="margin-right: 5em" class="nav-item">
-                            <a class="nav-link text-white fw-bold" asp-area="" asp-controller="@(user != null ? " Home"
-                                : "User" )" asp-action="Index">Home</a>
-                        </li>
+                         <a class="nav-link text-white fw-bold" href="https://localhost:44309/Home">Home</a>
+                       </li>
 
                         <li style="margin-right: 20em" class="nav-item">
                             <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="Admin">Acciones</a>
@@ -78,17 +77,16 @@
             @RenderBody()
         </main>
     </div>
-    <footer style="bottom:0;height:130px;">
+    <footer style="bottom:0 !important;height:130px;">
         <div class="flex">
             <small>Copyright &copy; 2022 All rights reserved | Grupo 8 <span class="footer-heart">&#9829;</span>
             </small>
             <ul>
                 <li>
-                    <a class="nav-link text-white fw-bold" asp-area="" asp-controller="@(user != null ? " Home" : "User" )"
-                        asp-action="Index">Home</a>
+                    <a class="nav-link text-white fw-bold" href="https://localhost:44309/Home">Home</a>
                 </li>
                 <li>
-                    <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="Admin">Acciones</a>
+                     <a class="nav-link text-white fw-bold" href="https://localhost:44309/User/Admin">Acciones</a>
                 </li>
                 <li>
                     <a class="nav-link text-white fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión

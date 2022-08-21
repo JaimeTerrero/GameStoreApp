@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ukqncIfhezhWC4JoMIjQ9OOnPAcnnrMfX2oy6Nj1Cg8h7nW5WXpxL8xFIu3+Ubk2tpUwA5SKbzJY36CxT6Of2A==",
+  "dgSpecHash": "g60uEv2nOcaFTUPhtrQS64VF4pQXLs+5EOwhASsGErHQhI6PXPMBQxNGsirOgwlUdtZPs0TOTKV4vKSbJ2QwHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elvis\\Source\\Repos\\GameStoreApp\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\elvis\\source\\repos\\GameStoreApp\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elvis\\.nuget\\packages\\mailkit\\3.3.0\\mailkit.3.3.0.nupkg.sha512",
     "C:\\Users\\elvis\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",

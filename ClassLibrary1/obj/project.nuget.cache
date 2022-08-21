@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c9cUw2iAsIBn/8B7HqdrWAq5+KhQQgaKs0JdOCiD9+30qM8tLTuwzkVhAG2Au+n3xggbnyUFPJ7OtZB9KyckjQ==",
+  "dgSpecHash": "BuCCO6R+TyzPzAbTYkcrFnaL37s1H/l2sF47FniNneHoYEy+36EB6aZmkifsWc7uDN2M+stA0W1zPQHnhgAukw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elvis\\Source\\Repos\\GameStoreApp\\ClassLibrary1\\Database.csproj",
+  "projectFilePath": "C:\\Users\\elvis\\source\\repos\\GameStoreApp\\ClassLibrary1\\Database.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elvis\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\elvis\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
