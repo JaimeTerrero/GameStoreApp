@@ -269,6 +269,7 @@ body {
 body {
     background: url('https://onclickwebdesign.com/wp-content/uploads/recent_games_bg.png') top center no-repeat;
     margin-bottom: 0;
+    height: 100% !important;
 }
 
 
