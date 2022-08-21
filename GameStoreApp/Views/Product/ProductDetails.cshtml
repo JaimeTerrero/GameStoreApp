@@ -1,0 +1,102 @@
+﻿@using Application.ViewModels;
+@model Application.ViewModels.InventaryViewModel
+
+@{
+    ViewData["title"] = "Carrito de compras";
+    int index = 0;
+    double sum = 0;
+}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Store</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/styless.css">
+    <link href="css/nav.css" rel="stylesheet">
+
+</head>
+
+<section class="w-100 p-3" style="background-color: #fdccbc;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <p><span class="h2">Carrito de compras</span></p>
+
+        @if (Model == null || Model.Products.Count == 0)
+        {
+            <h2>El carrito está vacío</h2>
+        }else{
+            @foreach (Application.ViewModels.ProductViewModel item in Model.Products)
+           {
+
+               <div class="card mb-4">
+                  <div class="card-body p-4">
+
+                      <div class="row align-items-center">
+                          <div class="col-md-2">
+                              <img src="@item.ImageUrl"
+                                   class="img-fluid" alt="Imagen producto">
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-center">
+                              <div>
+                                  <p class="small text-muted mb-4 pb-2">Nombre</p>
+                                  <p class="lead fw-normal mb-0">@item.Name</p>
+                              </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-center">
+                              <div>
+                                  <p class="small text-muted mb-4 pb-2">Cantidad</p>
+                                  <p class="lead fw-normal mb-0">1</p>
+                              </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-center">
+                              <div>
+                                  <p class="small text-muted mb-4 pb-2">Precio</p>
+                                  <p class="lead fw-normal mb-0">RD$@item.Price</p>
+                              </div>
+                          </div>
+                          <div class="col-md-2 d-flex justify-content-center">
+                              <div>
+                                  <p class="small text-muted mb-4 pb-2">Acción</p>
+                                  <a asp-controller="Product" asp-action="DeleteFromCart" asp-route-id="@Model.SavingProductsInventaries.FirstOrDefault(x => x.ProductId == @item.Id).Id" 
+                                      class="btn btn-danger">Eliminar</a>
+                              </div>
+                          </div>
+
+                      </div>
+
+                  </div>
+                </div>
+                index++;
+                sum += @item.Price;
+
+            }
+        }
+        <p class="h2"><span>@index</span> artículos en el carrito</p>
+
+        <div class="card mb-5">
+          <div class="card-body p-4">
+
+            <div class="float-end">
+              <p class="mb-0 me-5 d-flex align-items-center">
+                <span class="small text-muted me-2">Order total:</span> <span
+                  class="lead fw-normal">$@sum</span>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <a asp-controller="Home" asp-action="Index" class="btn btn-light btn-lg me-2">Continuar comprando</a>
+          <a asp-controller="Product" asp-action="Payment" asp-route-id="@Model.UserId" id="btn-payment"  class="btn btn-primary btn-lg">Pagar artículos</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+
+</script>

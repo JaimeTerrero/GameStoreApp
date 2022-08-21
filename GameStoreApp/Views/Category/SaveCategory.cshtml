@@ -1,0 +1,49 @@
+﻿@model Application.ViewModels.SaveCategoryViewModel
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+    ViewData["Title"] = "Guardar Categoría";
+
+}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Store</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/styless.css">
+    <link href="css/nav.css" rel="stylesheet">
+
+</head>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header bg-dark text-light">
+                    <h4 class="text-center">@(editMode ? $"Editando la categoría: {Model.Name}" : "Creando una nueva categoría")</h4>
+                </div>
+                <div class="card-body">
+
+                    <form method="post" asp-controller="Category" asp-action="@(editMode ? "Edit" : "Create")">
+
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label">Nombre: </label>
+                            <input type="text" asp-for="Name" class="form-control"/>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <input type="hidden" asp-for="Id"/>
+
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <a asp-controller="Category" asp-action="Index" class="btn btn-warning">Volver atrás</a>
+
+                    </form>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

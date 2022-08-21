@@ -1,0 +1,218 @@
+﻿@model Application.ViewModels.SaveUserViewModel
+@*@{
+        ViewData["Title"] = "LogIn";
+    }*@
+
+@{ Layout = null; }
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GAMES STORE </title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.js" integrity="sha256-mkdmXjMvBcpAyyFNCVdbwg4v+ycJho65QLDwVE3ViDs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link href="~/dist/style - Copy.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="container">
+        <div id="inviteContainer">
+            <div class="acceptContainer">
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        @*<div class="card">*@
+                        @*<div class="card-header bg-dark text-light">
+                                <h4 class="text-center">Creando un nuevo usuario</h4>
+                            </div>
+                            <div class="card-body">*@
+
+                        <form method="post" asp-controller="User" asp-action="Register">
+                            <h1>GAMES STORE</h1>
+                            <div class="formContainer">
+                                <div class="formDiv" style="transition-delay: 0.2s">
+                                    <p>Nombre:</p>
+                                    @*<label asp-for="Name" class="form-label">Nombre: </label>*@
+                                    <input type="text" asp-for="Name" class="form-control" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Apellido:</p>
+                                    @*<label asp-for="LastName" class="form-label">Apellido: </label>*@
+                                    <input type="text" asp-for="LastName" class="form-control" />
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Email:</p>
+                                    @*<label asp-for="Email" class="form-label">Correo: </label>*@
+                                    <input type="email" asp-for="Email" id="Email" onchange="EmailCheck()" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                    <p id="Show"></p>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Teléfono:</p>
+                                    @*<label asp-for="Phone" class="form-label">Teléfono: </label>*@
+                                    <input type="number" asp-for="Phone" id="Phone" onchange="PhoneCheck()" class="form-control" />
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                    <p id="Check"></p>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Nombre de Usuario:</p>
+                                    @*<label asp-for="Username" class="form-label">Nombre de usuario: </label>*@
+                                    <input type="text" asp-for="Username" id="Username" onchange="UserCheck()" class="form-control" />
+                                    <span asp-validation-for="Username" class="text-danger"></span>
+                                    <p id="Status"></p>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Contraseña:</p>
+                                    @*<label asp-for="Password" class="form-label">Contraseña: </label>*@
+                                    <input type="password" asp-for="Password" id="Password" onchange="MatchingPasswordsCheck()" class="form-control" />
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                    @*</div>
+
+                                        <div class="formDiv" style="transition-delay: 0.2s">*@
+                                    <p>Confirmar contraseña:</p>
+                                    @*<label asp-for="ConfirmPassword" class="form-label">Confirmar contraseña: </label>*@
+                                    <input type="password" asp-for="ConfirmPassword" id="ConfirmPassword" onchange="MatchingPasswordsCheck()" class="form-control" />
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    <p id="Showing"></p>
+                                </div>
+
+                                <div class="formDiv" style="transition-delay: 0.6s">
+                                    <button type="submit" class="acceptBtn" id="Register">Guardar</button>
+                                    <span class="register">you already have an account? <a asp-controller="User" asp-action="Index" class="btn btn-warning">Volver atrás</a></span>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    @*</div>*@
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+    function UserCheck() {
+        $("#Status").html("Verificando...");
+        $.post("@Url.Action("ValidateUserName","User")",
+            {
+                userData: $("#Username").val()
+            },
+
+            function (data) {
+                if (data == 0) {
+                    $("#Status").html('<font color="Green">Nombre de usuario disponible.</font>');
+                    $("#Username").css("border-color", "Green");
+                    $("Register").prop("disabled", false);
+                }
+                else {
+                    $("#Status").html('<font color="Red">El usuario ya está registrado. Intente con otro.</font>');
+                    $("#Username").css("border-color", "Red");
+                    $("#Register").prop("disabled", true);
+                }
+
+            });
+    }
+
+    function EmailCheck(){
+        $("#Show").html("Verificando...");
+        $.post("@Url.Action("ValidateEmailExistence","User")",
+            {
+                emailData: $("#Email").val()
+            },
+
+            function(data) {
+                if (data == 0) {
+                    $("#Show").html('<font color="Green">Correo disponible.</font>');
+                    $("#Email").css("border-color", "Green");
+                    $("#Register").prop("disabled", false);
+                }
+                //else if (data == 2) {
+                //    $("#Show").html('<font color="Red">Correo inválido</font>');
+                //    $("#Email").css("border-color", "Red");
+                //    $("#Register").prop("disabled", true);
+                else {
+                    $("#Show").html('<font color="Red">El correo ya está registrado. Intente con otro</font>');
+                    $("Email").css("border-color", "Red");
+                    $("#Register").prop("disabled", true);
+                }
+
+            });
+    }
+
+    function PhoneCheck() {
+        $("#Check").html("Verificando...");
+        $.post("@Url.Action("ValidatePhoneNumberExistence","User")",
+            {
+                phoneData: $("#Phone").val()
+            },
+
+            function(data) {
+                if (data == 0) {
+                    $("#Check").html('<font color="Green">Número de télefono disponible</font>');
+                    $("#Phone").css("border-color", "Green");
+                    $("#Register").prop("disabled", false);
+                }
+                else {
+                    $("#Check").html('<font color="Red">El número de Télefono ya está registrado. Intente con otro</font>');
+                    $("#Phone").css("border-color", "Red");
+                    $("#Register").prop("disabled", true);
+                }
+            });
+
+    }
+
+    //function MatchingPasswordsCheck(){
+    //    var password = document.querySelector("#Password").val();
+    //    var confirmPassword = document.querySelector("#ConfirmPassword").val();
+
+    //    $("#Showing").html("Verificando...");
+
+    //        function(password, confirmPassword) {
+    //            if (confirmPassword == password) {
+    //                $("#Showing").html('<font color="Green">Las contraseñas coinciden</font>');
+    //                $("#ConfirmPassword").css("border-color", "Green");
+    //                $("#Register").prop("disabled", false);
+    //            } else {
+    //                $("#Showing").html('<font color="Red">Las contraseñas no coinciden.</font>');
+    //                $("#ConfirmPassword").css("border-color", "Red");
+    //                $("#Register").prop("disabled", true);
+    //            }
+    //        }
+
+    //}
+
+    //function EmailValidationCheck(){
+    //    $("#Show").html("Verificando...");
+    //    $.post("@Url./*Action("IsEmailValid","User")*/", {
+    //        email: $("Email").val()
+    //    },
+
+    //    function(data){
+    //        if (data == 0) {
+    //            $("#Show").html('<font color="Green">Correo válido</font>');
+    //            $("#Email").css("border-color", "Green");
+    //            $("#Register").prop("disabled", true);
+    //        }
+    //        else {
+    //            $("#Check").html('<font color="Red">Correo inválido</font>');
+    //            $("#Email").css("border-color", "Red");
+    //            $("#Register").prop("disabled", true);
+    //        }
+    //    }
+    //    )
+    //}
+    </script>
+
+    <script src="~/dist/script.js"></script>
+</body>
+</html>

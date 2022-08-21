@@ -1,0 +1,66 @@
+﻿@using Application.ViewModels;
+@model Application.ViewModels.SaveInventaryViewModel;
+
+@{
+    ProductViewModel pvm = new();
+}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Store</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/styless.css">
+    <link href="css/nav.css" rel="stylesheet">
+
+</head>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/css/payment.css" />
+</head>
+
+<div class="container-fluid">
+        <div class="card px-4">
+        
+            <p class="h8 py-3">Detalles de pago</p>
+                <div class="row gx-3">
+                    <div class="col-12">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">Nombre de la persona</p>
+                            <input class="form-control mb-3" type="text" placeholder="ej: John Doe">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">Número de la tarjeta</p>
+                            <input class="form-control mb-3" type="text" placeholder="1234 5678 435678">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">Fecha de expiración</p>
+                            <input class="form-control mb-3" type="text" placeholder="MM/YYYY">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <p class="text mb-1">CVV/CVC</p>
+                            <input class="form-control mb-3 pt-2 " type="password" placeholder="***">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="btn btn-primary mb-3">
+                            <span class="ps-3">Pagar </span>
+                            <span class="fas fa-arrow-right"></span>
+                        </div>
+                    </div>
+
+                    <input type="hidden" asp-for="UserId"/>
+                </div>
+                
+        </div>
+    </div>
+
+<script>
+
+</script>

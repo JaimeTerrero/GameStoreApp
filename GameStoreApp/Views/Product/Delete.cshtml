@@ -1,0 +1,37 @@
+﻿@model Application.ViewModels.SaveProductViewModel
+@{
+    ViewData["Title"] = "Eliminar Producto";
+}
+
+ <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Store</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styless.css">
+    <link href="css/nav.css" rel="stylesheet">
+
+</head>
+
+<div class="row">
+
+    <div class="col-6 offset-3">
+        <div class="card">
+            <div class="card-header bg-danger text-light">
+                <h4>¿Está seguro que desea eliminar el producto @Model.Name?</h4>
+            </div>
+            <div class="card-body">
+
+                <form method="post" asp-controller="Product" asp-action="DeletePost">
+
+                    <input type="hidden" asp-for="Id" />
+
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                    <a asp-controller="Product" asp-action="Index" class="btn btn-warning">Cancelar</a>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>

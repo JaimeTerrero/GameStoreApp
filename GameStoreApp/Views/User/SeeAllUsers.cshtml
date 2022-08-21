@@ -1,0 +1,47 @@
+﻿@model List<Application.ViewModels.UserViewModel>
+
+@{
+    ViewData["title"] = "Users Info";
+    int index = 1;
+}
+
+ <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Store</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/styless.css">
+    <link href="css/nav.css" rel="stylesheet">
+
+</head>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th scope="row">#</th>
+            <th scope="row">Usuario</th>
+            <th scope="row">Nombre</th>
+            <th scope="row">Apellido</th>
+            <th scope="row">Teléfono</th>
+            <th scope="row">Correo</th>
+            <th scope="row">Rol</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Application.ViewModels.UserViewModel item in Model)
+        {
+            <tr>
+                <th scope="row">@index</th>
+                <td scope="row">@item.Username</td>
+                <td scope="row">@item.Name</td>
+                <td scope="row">@item.LastName</td>
+                <td scope="row">@item.Phone</td>
+                <td scope="row">@item.Email</td>
+                <td scope="row">@(item.Id == 1 ? "Admin" : "Cliente")</td>
+                <td scope="row"><a asp-controller="User" asp-action="EditUserInfo" asp-route-id="@item.Id" class="btn btn-primary">Editar</a></td>
+                <td scope="row"><a asp-controller="User" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+            index++;
+        }
+    </tbody>
+</table>
