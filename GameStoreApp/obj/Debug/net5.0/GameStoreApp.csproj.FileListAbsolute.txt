@@ -1356,3 +1356,4 @@ C:\Users\elvis\Source\Repos\GameStoreApp\GameStoreApp\obj\Debug\net5.0\refint\Ga
 C:\Users\elvis\Source\Repos\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.pdb
 C:\Users\elvis\Source\Repos\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.genruntimeconfig.cache
 C:\Users\elvis\Source\Repos\GameStoreApp\GameStoreApp\obj\Debug\net5.0\ref\GameStoreApp.dll
+C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Payment.cshtml.g.cs
