@@ -190,19 +190,6 @@ namespace GameStoreApp.Controllers
             return RedirectToRoute(new { controller = "User", action = "SeeAllUsers" });
         }
 
-        public async Task<IActionResult> Delete(int id)
-        {
-            return View(await _userService.GetByIdViewModel(id));
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> DeletePost(int id)
-        {
-            await _userService.Delete(id);
-
-            return RedirectToRoute(new { controller = "User", action = "SeeAllUsers" });
-        }
-
         public IActionResult Admin()
         {
             if (!_validateUserSession.HasUser())
@@ -211,6 +198,13 @@ namespace GameStoreApp.Controllers
             }
 
             return View("Admin");
+        }
+
+        public async Task<IActionResult> Remove(int id)
+        {
+            await _userService.GetByIdViewModel(id);
+            await _userService.Delete(id);
+            return RedirectToAction("SeeAllUsers");
         }
     }
 }

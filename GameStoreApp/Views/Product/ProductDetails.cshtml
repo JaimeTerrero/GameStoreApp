@@ -49,8 +49,8 @@
                           <div class="col-md-2 d-flex justify-content-center">
                               <div>
                                   <p class="small text-muted mb-4 pb-2">Acción</p>
-                                  <a asp-controller="Product" asp-action="DeleteFromCart" asp-route-id="@Model.SavingProductsInventaries.FirstOrDefault(x => x.ProductId == @item.Id).Id" 
-                                      class="btn btn-danger">Eliminar</a>
+                                  <button type="button" data-id="@Model.SavingProductsInventaries.FirstOrDefault(x => x.ProductId == @item.Id).Id" 
+                                      class="btn btn-danger deleteBtn">Eliminar</button>
                               </div>
                           </div>
 
@@ -88,6 +88,34 @@
   </div>
 </section>
 
-<script>
+<form id="deleteForm" asp-action="RemoveFromCart">
 
-</script>
+    <input type="hidden" id="cartTypeId" name="Id" />
+
+</form>
+
+
+@section Scripts{
+    
+    <script>
+        $(function () {
+            $('.deleteBtn').click(function (e) {
+                swal({
+                    title: "¿Está seguro?",
+                    text: "¿Está seguro que desea eliminar el registro?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true
+                }).then((confirm) => {
+                    if (confirm) {
+                        var btn = $(this);
+                        var id = btn.data("id");
+                        $('#cartTypeId').val(id);
+                        $('#deleteForm').submit();
+                    }
+                })
+            })
+        })
+    </script>
+
+}

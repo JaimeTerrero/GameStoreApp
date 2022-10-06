@@ -77,26 +77,11 @@ namespace GameStoreApp.Controllers
             return RedirectToRoute(new { controller = "Category", action = "Index" });
         }
 
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Remove(int id) 
         {
-            if (!_validateUserSession.HasUser())
-            {
-                return RedirectToRoute(new { controller = "User", action = "Index" });
-            }
-
-            return View(await _categoryService.GetByIdViewModel(id));
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> DeletePost(int id)
-        {
-            if (!_validateUserSession.HasUser())
-            {
-                return RedirectToRoute(new { controller = "User", action = "Index" });
-            }
-
+            await _categoryService.GetByIdViewModel(id);
             await _categoryService.Delete(id);
-            return RedirectToRoute(new { controller = "Category", action = "Index" });
+            return RedirectToAction("Index");
         }
     }
 }

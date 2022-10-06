@@ -871,11 +871,9 @@ C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.TagHelpers.input.cache
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.TagHelpers.output.cache
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorCoreGenerate.cache
-C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\Delete.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Category\SaveCategory.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Delete.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\ProductDetails.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\SaveProduct.cshtml.g.cs
@@ -884,7 +882,6 @@ C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Admin.cshtml.g.cs
-C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Delete.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\EditUserInfo.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\User\Register.cshtml.g.cs
@@ -900,7 +897,6 @@ C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.pdb
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.genruntimeconfig.cache
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\GameStoreApp.StaticWebAssets.xml
-C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\DeleteFromCart.cshtml.g.cs
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\DeleteFromCart.cshtml.g.cs
 C:\Users\Jaime David Terrero\OneDrive\Documentos\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Payment.cshtml.g.cs
 C:\Users\elvis\Source\Repos\GameStoreApp\GameStoreApp\bin\Debug\net5.0\appsettings.Development.json
@@ -1357,3 +1353,4 @@ C:\Users\elvis\Source\Repos\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStore
 C:\Users\elvis\Source\Repos\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.genruntimeconfig.cache
 C:\Users\elvis\Source\Repos\GameStoreApp\GameStoreApp\obj\Debug\net5.0\ref\GameStoreApp.dll
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Payment.cshtml.g.cs
+C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\libman.json

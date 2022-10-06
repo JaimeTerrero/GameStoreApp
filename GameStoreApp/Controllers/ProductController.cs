@@ -122,28 +122,10 @@ namespace GameStoreApp.Controllers
             return RedirectToRoute(new { controller = "Product", action = "Index" });
         }
 
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Remove(int id)
         {
-            if (!_validateUserSession.HasUser())
-            {
-                return RedirectToRoute(new { controller = "User", action = "Index" });
-            }
-
-            
-            return View(await _productService.GetByIdViewModel(id));
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> DeletePost(int id)
-        {
-            if (!_validateUserSession.HasUser())
-            {
-                return RedirectToRoute(new { controller = "User", action = "Index" });
-            }
-
+            await _productService.GetByIdViewModel(id);
             await _productService.Delete(id);
-
-
 
             // get directory path
             string basePath = $"/Images/Products/{id}";
@@ -162,7 +144,7 @@ namespace GameStoreApp.Controllers
             {
                 DirectoryInfo directoryInfo = new DirectoryInfo(path);
 
-                foreach(FileInfo file in directoryInfo.GetFiles())
+                foreach (FileInfo file in directoryInfo.GetFiles())
                 {
                     file.Delete();
                 }
@@ -175,7 +157,14 @@ namespace GameStoreApp.Controllers
                 Directory.Delete(path);
             }
 
-            return RedirectToRoute(new { controller = "Product", action = "Index" });
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> RemoveFromCart(int id)
+        {
+            await _inventaryService.GetByIdViewModel(id);
+            await _inventaryService.DeleteFromCart(id);
+            return RedirectToAction("ProductDetails");
         }
 
         
@@ -245,28 +234,28 @@ namespace GameStoreApp.Controllers
             return RedirectToAction("ProductDetails", sivm.InventaryId);
         }
 
-        public async Task<IActionResult> DeleteFromCart(int id) {
+        //public async Task<IActionResult> DeleteFromCart(int id) {
 
-            if (!_validateUserSession.HasUser())
-            {
-                return RedirectToRoute(new { controller = "User", action = "Index" });
-            }
+        //    if (!_validateUserSession.HasUser())
+        //    {
+        //        return RedirectToRoute(new { controller = "User", action = "Index" });
+        //    }
 
-            return View(await _inventaryService.GetByIdViewModel(id));
-        }
+        //    return View(await _inventaryService.GetByIdViewModel(id));
+        //}
 
-        [HttpPost]
-        public async Task<IActionResult> DeleteFromCartPost(int id)
-        {
-            if (!_validateUserSession.HasUser())
-            {
-                return RedirectToRoute(new { controller = "User", action = "Index" });
-            }
+        //[HttpPost]
+        //public async Task<IActionResult> DeleteFromCartPost(int id)
+        //{
+        //    if (!_validateUserSession.HasUser())
+        //    {
+        //        return RedirectToRoute(new { controller = "User", action = "Index" });
+        //    }
 
-            await _inventaryService.DeleteFromCart(id);
+        //    await _inventaryService.DeleteFromCart(id);
 
-            return RedirectToRoute(new { controller = "Product", action = "ProductDetails" });
-        }
+        //    return RedirectToRoute(new { controller = "Product", action = "ProductDetails" });
+        //}
 
         public async Task<IActionResult> Payment(int id)
         {
