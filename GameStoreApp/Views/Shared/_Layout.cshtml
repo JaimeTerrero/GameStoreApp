@@ -11,74 +11,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />*@
     <title>@ViewData["Title"] - GameStoreApp</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
+    @*<link rel="stylesheet" href="~/css/site.css" />*@
+    <!--<link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <link href="~/Nuevo/css/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 custom-nav">
-            <div class="container">
 
-                <a style="margin-right: 14em" class="navbar-brand text-warning fw-bold" asp-area="" asp-controller="@(user != null ? "Home" : "User")" asp-action="Index">Games Store</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a style="margin-right: 14em" class="navbar-brand" asp-area="" asp-controller="@(user != null ? "Home" : "User")" asp-action="Index">
+                <img src="~/dist/IMG/logo1.png" width="50px" height="35px"/>
+                GameStore
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        @if (user != null) //Si es un usuario logueado mostrará estás opciones, de lo contrario no lo hara.
-                        {
-                            if (user.Id == 1)
-                            {
-                                <li style="margin-right: 5em" class="nav-item">
-                                    <a class="nav-link text-warning fw-bold" href="https://localhost:44309/Home">Home</a>
-                               </li>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            @if (user != null) //Si es un usuario logueado mostrará estás opciones, de lo contrario no lo hara.
+            {
+                if (user.Id == 1)
+                {
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="https://localhost:44309/Home">Inicio</a></li>
 
-                                <li style="margin-right: 20em" class="nav-item">
-                                    <a class="nav-link text-warning fw-bold" asp-controller="User" asp-action="Admin">Acciones</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-warning fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión
-                                        (@user.Name @user.LastName)</a>
-                                </li>
-                            }
-                            else
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-warning fw-bold" asp-controller="Product" asp-action="ProductDetails">Carrito de compras</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-warning fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión
-                                        (@user.Name @user.LastName) </a>
-                                </li>
-                            }
-                        }
-                        else
-                        {
-                        <li class="nav-item">
-                            <a class="nav-link text-warning fw-bold" asp-controller="User" asp-action="Register">Registrate!</a>
-                        </li>
-                        }
-                    </ul>
-                </div>
-            </div>
+                            <li class="nav-item"><a class="nav-link" asp-controller="User" asp-action="Admin">Acciones</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" asp-controller="User" asp-action="LogOut">Cerrar Sesión</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <button class="btn btn-outline-dark" type="submit" asp-controller="Product" asp-action="ProductDetails">
+                                <i class="bi-cart-fill me-1"></i>
+                                Cart
+                            </button>
+                        </form>
+                    </div>
+                }
+                else
+                {
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="https://localhost:44309/Home">Inicio</a></li>
+                        </ul>
+                        <form class="d-flex">
+                            <button class="btn btn-outline-dark" type="submit" asp-controller="Product" asp-action="ProductDetails">
+                                <i class="bi-cart-fill me-1"></i>
+                                Cart
+                            </button>
+                        </form>
+                    </div>
+                }
+            }
+
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-warning fw-bold" asp-controller="User" asp-action="Register">Registrate!</a>
+                </li>
+            }
+        </div>
         </nav>
-    </header>
-    <div class="bg-layout container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/lib/sweetalert/sweetalert.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
+    @RenderBody();
+        @*<header>
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 custom-nav">
+                    <div class="container">
+
+                        <a style="margin-right: 14em" class="navbar-brand" asp-area="" asp-controller="@(user != null ? "Home" : "User")" asp-action="Index">Games Store</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                            <ul class="navbar-nav flex-grow-1">
+                                @if (user != null) //Si es un usuario logueado mostrará estás opciones, de lo contrario no lo hara.
+                                {
+                                    if (user.Id == 1)
+                                    {
+                                        <li style="margin-right: 5em" class="nav-item">
+                                            <a class="nav-link text-warning fw-bold" href="https://localhost:44309/Home">Home</a>
+                                       </li>
+
+                                        <li style="margin-right: 20em" class="nav-item">
+                                            <a class="nav-link text-warning fw-bold" asp-controller="User" asp-action="Admin">Acciones</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-warning fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión
+                                                (@user.Name @user.LastName)</a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li class="nav-item">
+                                            <a class="nav-link text-warning fw-bold" asp-controller="Product" asp-action="ProductDetails">Carrito de compras</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-warning fw-bold" asp-controller="User" asp-action="LogOut">Cerrar sesión
+                                                (@user.Name @user.LastName) </a>
+                                        </li>
+                                    }
+                                }
+                                else
+                                {
+                                <li class="nav-item">
+                                    <a class="nav-link text-warning fw-bold" asp-controller="User" asp-action="Register">Registrate!</a>
+                                </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>*@
+
+
+
+        <div class="bg-layout container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/sweetalert/sweetalert.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+
+
+    </body>
 </html>

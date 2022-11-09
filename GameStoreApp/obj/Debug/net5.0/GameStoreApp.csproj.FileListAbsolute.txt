@@ -455,7 +455,6 @@ C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\GameStoreApp.runtimeconfig.json
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\GameStoreApp.runtimeconfig.dev.json
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\GameStoreApp.dll
-C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\ref\GameStoreApp.dll
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\GameStoreApp.pdb
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -866,7 +865,6 @@ C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorAssemblyInfo.cache
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.RazorAssemblyInfo.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\staticwebassets\GameStoreApp.StaticWebAssets.Manifest.cache
-C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\staticwebassets\GameStoreApp.StaticWebAssets.xml
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\scopedcss\bundle\GameStoreApp.styles.css
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.TagHelpers.input.cache
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStoreApp.TagHelpers.output.cache
@@ -1354,3 +1352,5 @@ C:\Users\elvis\Source\Repos\GameStoreApp\GameStoreApp\obj\Debug\net5.0\GameStore
 C:\Users\elvis\Source\Repos\GameStoreApp\GameStoreApp\obj\Debug\net5.0\ref\GameStoreApp.dll
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\Razor\Views\Product\Payment.cshtml.g.cs
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\libman.json
+C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\bin\Debug\net5.0\ref\GameStoreApp.dll
+C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\GameStoreApp\obj\Debug\net5.0\staticwebassets\GameStoreApp.StaticWebAssets.xml

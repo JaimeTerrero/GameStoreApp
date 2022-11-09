@@ -45,7 +45,6 @@ C:\Users\jimke\Documents\GameStoreApp\Application\obj\Debug\net5.0\ref\Applicati
 C:\Users\jimke\Documents\GameStoreApp\Application\obj\Debug\net5.0\Application.pdb
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\Application\bin\Debug\net5.0\Application.deps.json
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\Application\bin\Debug\net5.0\Application.dll
-C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\Application\bin\Debug\net5.0\ref\Application.dll
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\Application\bin\Debug\net5.0\Application.pdb
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\Application\bin\Debug\net5.0\Database.dll
 C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\Application\bin\Debug\net5.0\Database.pdb
@@ -73,3 +72,4 @@ C:\Users\elvis\Source\Repos\GameStoreApp\Application\obj\Debug\net5.0\Applicatio
 C:\Users\elvis\Source\Repos\GameStoreApp\Application\obj\Debug\net5.0\refint\Application.dll
 C:\Users\elvis\Source\Repos\GameStoreApp\Application\obj\Debug\net5.0\Application.pdb
 C:\Users\elvis\Source\Repos\GameStoreApp\Application\obj\Debug\net5.0\ref\Application.dll
+C:\Users\delvi\OneDrive\Documents\GitHub\GameStoreApp\Application\bin\Debug\net5.0\ref\Application.dll

@@ -3,223 +3,248 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<link rel="stylesheet" href="~/css/site.css" />
 
 
-<div class="bg-animated container-fluid">
+@*<link rel="stylesheet" href="~/css/site.css" />*@
 
-    <div class="row">
 
-<form class="toggle" method="post" asp-controller="Home" asp-action="Index">
-    <div class="ct-container">
-        <div class="radio-tile-group">
-            <div class="input-container">
 
-                <input id="choice1" class="radio-button" type="submit" type="radio" name="CategoryId" />
-                <div class="radio-tile">
-                    <div class="icon walk-icon">
-                        <i class="fa-solid fa-list"></i>
-                    </div>
-                    <label for="choice1" class="radio-tile-label">Todas</label>
-                </div>
-            </div>
-            @foreach(CategoryViewModel category in ViewBag.Categories)
-            {
-            <div class="input-container">
-                <input class="radio-button" value="@category.Id" type="submit" type="radio" name="CategoryId"
-                    id="category-@category.Id" />
-                <div class="radio-tile">
-                    <div class="icon bike-icon">
-                        <i class="fa-solid fa-gamepad-modern"></i>
-                    </div>
-                    <label for="category-@category.Id" class="radio-tile-label">@category.Name</label>
-                </div>
-            </div>
-            }
-        </div>
-    </div>
-</form>
-        </div>
-        <br />
-            <div class="row game-types-boxes">
-        <div class="col-12">
-            <div class="px-5 row game-types-boxes">
+@*  <div class="row">
 
-                @if (Model == null || Model.Count == 0)
-                {
-                    <h2>No hay productos</h2>
-                }
-                else
-                {
-                    @foreach (Application.ViewModels.ProductViewModel item in Model)
-                    {
-                        <div class="col-4">
-                            <div class="mb-4">
+        <form class="toggle" method="post" asp-controller="Home" asp-action="Index">
+            <div class="ct-container">
+                <div class="radio-tile-group">
+                    <div class="input-container">
 
-                                    <img class="card-img-top img-product-size" src="@item.ImageUrl" />
-
-                                    <div class="card-body contents">
-                                        <h4>@item.Name</h4>
-                                        <p class="card-text desc">@item.Description</p>
-                                        <div class="mb-2">
-                                            <small class="fw-bold fs-6">RD$@item.Price</small>
-                                        </div>
-                                        <div class="d-flex gap-4">
-                                            <a asp-controller="Product" asp-action="ShowProduct" asp-route-id="@item.Id" class="btn btn-warning see-product">Ver Producto</a>
-                                        </div>
-                                    </div>
+                        <input id="choice1" class="radio-button" type="submit" type="radio" name="CategoryId" />
+                        <div class="radio-tile">
+                            <div class="icon walk-icon">
+                                <i class="fa-solid fa-list"></i>
                             </div>
-                            
+                            <label for="choice1" class="radio-tile-label">Todas</label>
+                        </div>
+                    </div>
+                    @foreach (CategoryViewModel category in ViewBag.Categories)
+                    {
+                        <div class="input-container">
+                            <input class="radio-button" value="@category.Id" type="submit" type="radio" name="CategoryId"
+                               id="category-@category.Id" />
+                            <div class="radio-tile">
+                                <div class="icon bike-icon">
+                                    <i class="fa-solid fa-gamepad-modern"></i>
+                                </div>
+                                <label for="category-@category.Id" class="radio-tile-label">@category.Name</label>
+                            </div>
                         </div>
                     }
-                }
+                </div>
+            </div>
+        </form>
+    </div>*@
 
+
+<br />
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">GameStore</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Añadiendo diversión a tu vida.</p>
+        </div>
+    </div>
+
+</header>
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5 ">
+            <div class="px-5 row game-types-boxes">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+                    @if (Model == null || Model.Count == 0)
+                    {
+                        <h2>No hay productos</h2>
+                    }
+                    else
+                    {
+                        @foreach (Application.ViewModels.ProductViewModel item in Model)
+                        {
+                     
+                            <div class="col mb-5">
+                                <div class="card h-100">
+                                    <!-- Product image-->
+                                    <img class="card-img-top" src="@item.ImageUrl" alt="..." />
+                                    <!-- Product details-->
+                                    <div class="card-body p-4">
+                                        <div class="text-center">
+                                            <!-- Product name-->
+                                            <h5 class="fw-bolder">@item.Name</h5>
+                                            <h6 class="fw-bolder">@item.Description</h6>
+                                            <!-- Product price-->
+                                            $@item.Price
+                                        </div>
+                                    </div>
+                                    <!-- Product actions-->
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><a asp-controller="Product" asp-action="ShowProduct" asp-route-id="@item.Id" class="btn btn-outline-dark mt-auto">View options</a></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    }
+                </div>
             </div>
         </div>
 
-    </div>
-
-    
-</div>
+    </section>
 
 
-<style>
 
-.card{
-    background: #fdfdfd !important;
-}
-* {
-  box-sizing: border-box;
-  font-family: 'Helvetica Neue', sans-serif;
-}
-.see-product{
-    color:white !important;
-}
-.ct-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-}
-.radio-tile-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-radius: 10px;
-}
-.radio-tile-group .input-container {
-  position: relative;
-  height: 7rem;
-  width: 7rem;
-  margin: 0.5rem;
-}
-.radio-tile-group .input-container .radio-button {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  cursor: pointer;
-    background-color: #ffc12b;
-}
-.radio-tile-group .input-container .radio-tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 75%;
-  border: 2px solid #ffc12b;
-  border-radius: 5px;
-  padding: 1rem;
-  transition: transform 300ms ease;
-      background-color: #ffc12b;
+    @*
+        <style>
 
-}
+            .card {
+                background: #fdfdfd !important;
+            }
 
-.radio-tile-group .input-container .radio-tile-label {
-  text-align: center;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
- color: #fff;
-   background-color: #ffc12b;
-}
-.radio-tile-group .input-container .radio-button:checked + .radio-tile {
-  background-color: #ffc12b;
-  border: 2px solid #ffc12b;
-  color: white;
-  transform: scale(1.1, 1.1);
-}
-.radio-tile-group .input-container .radio-button:checked + .radio-tile .icon svg {
-  fill: white;
-  background-color: #ffc12b;
-}
-.radio-tile-group .input-container .radio-button:checked + .radio-tile .radio-tile-label {
-  color: white;
-  background-color: #ffc12b;
-}
+            * {
+                box-sizing: border-box;
+                font-family: 'Helvetica Neue', sans-serif;
+            }
 
-.desc {
-        width: 240px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    /* start: game types styles */
-#game-types-boxes {
-    margin-bottom: 75px;
-}
+            .see-product {
+                color: white !important;
+            }
 
-#game-types-boxes .box {
-    flex-basis: 25%;
-    position: relative;
-    height: 380px;
-}
+            .ct-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+            }
 
-#game-types-boxes .box.new {
-    background: url('https://onclickwebdesign.com/wp-content/uploads/wow_lady.jpg') top center no-repeat;
-    background-size: cover;
-}
+            .radio-tile-group {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                border-radius: 10px;
+            }
 
-#game-types-boxes .box.strategy {
-    background: url('https://onclickwebdesign.com/wp-content/uploads/robotic_ninja.jpg') top center no-repeat;
-    background-size: cover;
-}
+                .radio-tile-group .input-container {
+                    position: relative;
+                    height: 7rem;
+                    width: 7rem;
+                    margin: 0.5rem;
+                }
 
-#game-types-boxes .box.rpg {
-    background: url('https://onclickwebdesign.com/wp-content/uploads/jeep_armed.jpg') top center no-repeat;
-    background-size: cover;
-}
+                    .radio-tile-group .input-container .radio-button {
+                        opacity: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        margin: 0;
+                        cursor: pointer;
+                        background-color: #ffc12b;
+                    }
 
-#game-types-boxes .box.racing {
-    background: url('https://onclickwebdesign.com/wp-content/uploads/sports_car.jpg') top center no-repeat;
-    background-size: cover;
-}
+                    .radio-tile-group .input-container .radio-tile {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 75%;
+                        border: 2px solid #ffc12b;
+                        border-radius: 5px;
+                        padding: 1rem;
+                        transition: transform 300ms ease;
+                        background-color: #ffc12b;
+                    }
 
-#game-types-boxes .box .badge {
-    position: relative;
-    z-index: 2;
-    top: 20px;
-    left: 20px;
-}
+                    .radio-tile-group .input-container .radio-tile-label {
+                        text-align: center;
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        color: #fff;
+                        background-color: #ffc12b;
+                    }
 
-#game-types-boxes .box .contents {
-    position: absolute;
-    z-index: 2;
-    bottom: 20px;
-    left: 0;
-    color: #eee;
-    padding: 0 35px 0 25px;
-}
+                    .radio-tile-group .input-container .radio-button:checked + .radio-tile {
+                        background-color: #ffc12b;
+                        border: 2px solid #ffc12b;
+                        color: white;
+                        transform: scale(1.1, 1.1);
+                    }
 
-#game-types-boxes .box .contents a {
-    font-size: 0.8em;
-    font-weight: 300;
-    color: #999;
-}
-/* end: game types styles */
-</style>
+                        .radio-tile-group .input-container .radio-button:checked + .radio-tile .icon svg {
+                            fill: white;
+                            background-color: #ffc12b;
+                        }
+
+                        .radio-tile-group .input-container .radio-button:checked + .radio-tile .radio-tile-label {
+                            color: white;
+                            background-color: #ffc12b;
+                        }
+
+            .desc {
+                width: 240px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            /* start: game types styles */
+            #game-types-boxes {
+                margin-bottom: 75px;
+            }
+
+                #game-types-boxes .box {
+                    flex-basis: 25%;
+                    position: relative;
+                    height: 380px;
+                }
+
+                    #game-types-boxes .box.new {
+                        background: url('https://onclickwebdesign.com/wp-content/uploads/wow_lady.jpg') top center no-repeat;
+                        background-size: cover;
+                    }
+
+                    #game-types-boxes .box.strategy {
+                        background: url('https://onclickwebdesign.com/wp-content/uploads/robotic_ninja.jpg') top center no-repeat;
+                        background-size: cover;
+                    }
+
+                    #game-types-boxes .box.rpg {
+                        background: url('https://onclickwebdesign.com/wp-content/uploads/jeep_armed.jpg') top center no-repeat;
+                        background-size: cover;
+                    }
+
+                    #game-types-boxes .box.racing {
+                        background: url('https://onclickwebdesign.com/wp-content/uploads/sports_car.jpg') top center no-repeat;
+                        background-size: cover;
+                    }
+
+                    #game-types-boxes .box .badge {
+                        position: relative;
+                        z-index: 2;
+                        top: 20px;
+                        left: 20px;
+                    }
+
+                    #game-types-boxes .box .contents {
+                        position: absolute;
+                        z-index: 2;
+                        bottom: 20px;
+                        left: 0;
+                        color: #eee;
+                        padding: 0 35px 0 25px;
+                    }
+
+                        #game-types-boxes .box .contents a {
+                            font-size: 0.8em;
+                            font-weight: 300;
+                            color: #999;
+                        }
+            /* end: game types styles */
+        </style>*@
